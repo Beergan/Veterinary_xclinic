@@ -1,0 +1,174 @@
+﻿@page "/login"
+@model SLK.XClinic.WebHost.Pages.LoginModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>X-Clinic [v@(SLK.XClinic.WebHost.AutoClass.FullVersion) @SLK.XClinic.WebHost.AutoClass.BuildName] - Quản lý phòng khám</title>
+    <meta name="description" content="X-Clinic - Giải pháp quản lý phòng khám">
+    <meta name="keywords" content="phan mem, quan ly phong kham, dien toan dam may">
+    <meta property="og:title" content="X-Clinic - Quản lý phòng khám" />
+    <meta property="og:image" content="~/assets/images/logo-mains.png" />
+    <meta property="og:description" content="X-Clinic - Giải pháp quản lý phòng khám" />
+    <base href="/" />
+    <link rel="icon" href="~/assets/images/favicon-ileadernext.png" />
+    <link rel="mask-icon" href="~/assets/images/favicon-ileadernext.png" />
+    <link rel="icon" sizes="16x16" href="~/assets/images/favicon-ileadernext.png" />
+    <link rel="icon" sizes="192x192" href="~/assets/images/favicon-ileadernext.png" />
+    <link rel="stylesheet" href="assets/bootstrap/4.5.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/font-awesome/5.15.1/css/all.css" />
+    <link rel="stylesheet" href="assets/login.css" />
+    <style>
+        html, body {
+            font-family: sans-serif;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+        }
+
+        .nav-item-tab {
+            position: relative !important;
+        }
+
+        .nav-item {
+            position: absolute;
+            list-style: none;
+            right: 0px;
+            top: 2px;
+            border: none;
+            z-index: 10000;
+        }
+
+        .nav-link {
+            padding: 0px;
+        }
+
+            .nav-link:hover {
+                border: none;
+            }
+
+        .dropdown-menu {
+            top: -32px !important;
+            left: -20px !important;
+        }
+
+            .dropdown-menu.show {
+                display: block;
+                top: 0px !important;
+                left: 10px;
+            }
+
+        .image-nation {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .icon-language {
+            font-weight: bold;
+            color: #ffffff;
+            padding-right: 10px;
+            font-size: 20px;
+        }
+
+            .icon-language:hover {
+                border: none;
+            }
+
+        .login-form {
+            position: relative;
+        }
+
+        .language-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .icon-universe {
+            margin-right: 5px;
+        }
+        /* Thêm class cho form login */
+        .login-form-container {
+            position: relative;
+        }
+
+        /* Di chuyển nút ngôn ngữ và biểu tượng ngôn ngữ sang phải trên cùng */
+        #dropdownLanguage {
+            top: 10px;
+            right: 10px;
+        }
+
+        .language-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-none d-md-block">
+                <div class="container" id="container">
+                    <div class="form-container sign-in">
+                        <form method="post">
+                            <h3 class="text-center">Quản lý phòng khám</h3>
+                            <input name="UserId" placeholder="@Model.Text["User name", "Tên tài khoản"]" type="text">
+                            <input name="Password" placeholder="@Model.Text["Password", "Mật khẩu"]" type="password">
+                            <small class="text-danger">@Html.ValidationMessage("error")</small>
+                            <a href="/forgot-password" class="fp">@Model.Text["Forgot password", "Quên mật khẩu"]</a>
+                            <button type="submit" style="background-color: #292b2d">@Model.Text["Login", "Đăng nhập"]</button>
+                            <div class="social-icons">
+                                <center>&copy;@DateTime.Now.Date.Year X-Clinic</center>
+                                <center>@Model.Text["Version", "Phiên bản"] @SLK.XClinic.WebHost.AutoClass.FullVersion @SLK.XClinic.WebHost.AutoClass.BuildName</center>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="toggle-container">
+                        <div class="toggle" style="background-color: #292b2d;">
+                            <div class="toggle-panel toggle-right" style="color: #ffffff">
+                                <h3>@Model.Text["Hello, Employee!", "Xin chào, nhân sự!"]</h3>
+                                <p>
+                                    @Model.Text["Enter your personal information to use all the features of the software.", "Nhập thông tin cá nhân của bạn để sử dụng tất cả các tính năng của phần mềm."]
+                                </p>
+                                <img src="/assets/images/logo-mains.png" alt="Quản lý phòng khám" height="60">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 d-block d-md-none">
+                <div class="container" id="container">
+                    <div class="form-container sign-in" style="width: 100%!important">
+                        <form method="post">
+                            <h3 class="text-center">Quản lý phòng khám</h3>
+                            <input name="UserId" placeholder="@Model.Text["User name", "Tên tài khoản"]" type="text">
+                            <input name="Password" placeholder="@Model.Text["Password", "Mật khẩu"]" type="password">
+                            <small class="text-danger">@Html.ValidationMessage("error")</small>
+                            <a href="/forgot-password" class="fp">@Model.Text["Forgot password", "Quên mật khẩu"]</a>
+                            <button type="submit" class="login">@Model.Text["Login", "Đăng nhập"]</button>
+                            <div class="social-icons">
+                                <center>&copy;@DateTime.Now.Date.Year X-Clinic</center>
+                                <center>@Model.Text["Version", "Phiên bản"] @SLK.XClinic.WebHost.AutoClass.FullVersion @SLK.XClinic.WebHost.AutoClass.BuildName</center>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/jquery/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/app.js"></script>
+</body>
+
+</html>

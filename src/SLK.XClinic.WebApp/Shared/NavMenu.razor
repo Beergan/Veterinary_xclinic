@@ -1,0 +1,31 @@
+﻿@inject ITextTranslator Text
+@inject IBlazorContext Context
+
+<MudNavMenu>
+    @*VETERNAY CLINIC*@
+    <MudNavGroup Title="Khách hàng" Expanded="false" Icon="@Icons.Material.Filled.People">
+        <MudNavLink Href="/customer/list" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">Danh sách khách hàng</MudNavLink>
+        <MudNavLink Href="/customer/history" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.History">Lịch sử khám</MudNavLink>
+        <MudNavLink Href="/customer/appointments" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Event">Lịch hẹn tái khám</MudNavLink>
+    </MudNavGroup>
+
+    <MudNavGroup Title="Dịch vụ" Expanded="false" Icon="@Icons.Material.Filled.MedicalServices">
+        <MudNavLink Href="/service/list" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Business">Danh mục dịch vụ</MudNavLink>
+    </MudNavGroup>
+
+
+    @* CÀI ĐẶT *@
+    <MudNavGroup Title="Cài đặt" Expanded="false" Icon="@Icons.Material.Filled.Tune">
+        <MudNavLink Href="/employee/list" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Work">Danh sách nhân sự</MudNavLink>
+        <MudNavLink Href="/category/company" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Business">Công ty</MudNavLink>
+        <MudNavLink Href="/category/office" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Apartment">Chi nhánh</MudNavLink>
+        <MudNavLink Href="/category/job" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.WorkOutline">Vị trí công việc</MudNavLink>
+    </MudNavGroup>
+
+    @* QUẢN TRỊ *@
+    <MudNavGroup Title="Quản trị" Expanded="false" Icon="@Icons.Material.Filled.Security">
+        <MudNavLink Href="/management/account" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AccountBox">Tài khoản</MudNavLink>
+        <MudNavLink Href="/management/permission-group" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Lock">Nhóm phân quyền</MudNavLink>
+        <MudNavLink Href="/audit-log" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.FactCheck">Logs hệ thống</MudNavLink>
+    </MudNavGroup>
+</MudNavMenu>

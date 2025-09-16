@@ -1,0 +1,22 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+
+<div class="app-content-wrapper">
+    <div class="app-content-head" style="padding: 0px; height: 0px">
+    </div>
+    <div class="app-content-body" style="overflow:auto; padding: 10px">
+        <h5>v1.22.05.17</h5>
+        <ul>
+            <li>Xây dựng src-net8</li>
+            <li>- Nhân sự, chi nhánh, vị trí công việc, thông tin công ty, chi nhánh, quản trị (tài khoản, nhóm phân quyền)</li>
+            <li>- Logo image base64 thông tin công ty, chi nhánh</li>
+        </ul>
+    </div>
+</div>
+
+@code {
+    protected override void OnInitialized()
+    {
+    }
+}

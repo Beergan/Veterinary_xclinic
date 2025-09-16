@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>aspnet-SLK.XClinic.WebHost-a3ae549c-b071-46e4-b85b-d8fe68e14c9d</UserSecretsId>
+		<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+		<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+		<PublishSingleFile>true</PublishSingleFile>
+		<SelfContained>false</SelfContained>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+		<DebugType>embedded</DebugType>
+		<ApplicationIcon>icon.ico</ApplicationIcon>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<NoWarn>1591;1998;BL0005;</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SLK.XClinic.Abstract\SLK.XClinic.Abstract.csproj" />
+		<ProjectReference Include="..\SLK.XClinic.Base\SLK.XClinic.Base.csproj" />
+		<ProjectReference Include="..\SLK.XClinic.Db\SLK.XClinic.Db.csproj" />
+		<ProjectReference Include="..\SLK.XClinic.ModuleEmployee\SLK.XClinic.ModuleEmployee.csproj" />
+		<ProjectReference Include="..\SLK.XClinic.ModuleManagement\SLK.XClinic.ModuleManagement.csproj" />
+		<ProjectReference Include="..\SLK.XClinic.ModuleSetting\SLK.XClinic.ModuleSetting.csproj" />
+		<ProjectReference Include="..\SLK.XClinic.ModuleVeternay\SLK.XClinic.ModuleVeternay.csproj" />
+		<ProjectReference Include="..\SLK.XClinic.WebApp\SLK.XClinic.WebApp.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="AutoVersion.tt">
+			<Generator>TextTemplatingFileGenerator</Generator>
+			<LastGenOutput>AutoVersion.cs</LastGenOutput>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Update="AutoVersion.cs">
+			<DesignTime>True</DesignTime>
+			<AutoGen>True</AutoGen>
+			<DependentUpon>AutoVersion.tt</DependentUpon>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+</Project>

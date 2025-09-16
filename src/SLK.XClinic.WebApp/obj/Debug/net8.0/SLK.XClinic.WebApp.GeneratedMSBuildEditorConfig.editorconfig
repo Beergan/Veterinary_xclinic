@@ -1,0 +1,105 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = SLK.XClinic.WebApp
+build_property.RootNamespace = SLK.XClinic.WebApp
+build_property.ProjectDir = C:\SLK\Veterinary_xclinic\src\SLK.XClinic.WebApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\SLK\Veterinary_xclinic\src\SLK.XClinic.WebApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Um91dGVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/Error404.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEVycm9yNDA0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/LanguageHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExhbmd1YWdlSGVhZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/Loading.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRpbmcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/LoadingLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvYWRpbmdMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/Modal.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/MyDataAdaptor.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE15RGF0YUFkYXB0b3IucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/MyHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE15SGVhZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/MyHeaderItem.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE15SGVhZGVySXRlbS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/NotificationHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5vdGlmaWNhdGlvbkhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/RuntimeHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJ1bnRpbWVIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Shared/UserInfoHeader.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFVzZXJJbmZvSGVhZGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-wman17pag3
+
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.WebApp/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-1au56o9cu2
