@@ -6,3 +6,4 @@ C:\SLK\x-clinic\src\SLK.XClinic.ModuleEmployeeBlazor\obj\Debug\net8.0\staticweba
 C:\SLK\x-clinic\src\SLK.XClinic.ModuleEmployeeBlazor\obj\Debug\net8.0\staticwebassets.build.json
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleEmployeeBlazor\obj\Debug\net8.0\staticwebassets.build.json
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleEmployeeBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleEmployeeBlazor\obj\Debug\net8.0\staticwebassets.build.json

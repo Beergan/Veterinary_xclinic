@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SLK.XClinic.WebApp",
   "resources": {
-    "hash": "sha256-gZwAwthCyQMrHsff09eIm/aTzjDPy6bSuaEAq07hkNY=",
+    "hash": "sha256-XeIw5g6rdDTgQ4VmdFgt3qrVkRTsAUl6vJ/5ctbn8pg=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-O/NCYcAN9uPocD7ns7AzF/cqx7f5vL1PTJCQs0vEXyk="
     },
@@ -303,26 +303,26 @@
       "mscorlib.wasm": "sha256-RLW/7NVuhoPfq151II3kX2kWHgBwQgpCw9aemQNg3to=",
       "netstandard.wasm": "sha256-lAg5WvTiA8wbsIwlr51xh0YWpXT9F5EX3Cnv+11O/mU=",
       "System.Private.CoreLib.wasm": "sha256-3O3muuRQwoLRecYRjfIFWUURvTjP4EmD2O8wYg2UDNY=",
-      "SLK.XClinic.Abstract.wasm": "sha256-pRKui0C0iZ7Y6CoLJCiws2+iM/X2tCuDPSKzRSoB3UA=",
-      "SLK.XClinic.ModuleEmployeeBlazor.wasm": "sha256-neHI+izuA3ThSjU3TrSrb4FOALeiqXP0ta11VZBjQCU=",
-      "SLK.XClinic.ModuleEmployeeCore.wasm": "sha256-dJbo1gksx1khCVGgiQtbJccyQKkT3ssdPIgOtb0g4zc=",
-      "SLK.XClinic.ModuleManagementBlazor.wasm": "sha256-O6DFU4UinYsaF+tXOwoPi8kXKkvaehrwt3zI0kxKdKE=",
-      "SLK.XClinic.ModuleManagementCore.wasm": "sha256-AyrRadYZtP0zxGUROfPntZzoZk2eKKHDs6EEYoaWQrY=",
-      "SLK.XClinic.ModuleSettingBlazor.wasm": "sha256-Bn5AOAUAdOi/tA/ZiW7dhsYY/y3Eq8o6HNNSA7xzErI=",
-      "SLK.XClinic.ModuleSettingCore.wasm": "sha256-Z8xMKDVxsdjzSvMmQYaYm6VUG94BzBzftV8V3yAXCT4=",
-      "SLK.XClinic.ModuleVeternayBlazor.wasm": "sha256-t/i3wXlpsNNum8IimxtcUOl5Zc0/UE9+Y5GmApFb+ak=",
-      "SLK.XClinic.ModuleVeternayCore.wasm": "sha256-aHEi+sRSpJGWOLqH6fRRwq3XPn9CIUj4AUhZrrtmpuo=",
-      "SLK.XClinic.WebApp.wasm": "sha256-tMvHxND4DZhz4Ekl6pZjYkY/XmGUVXfqYuo0HdR6A68="
+      "SLK.XClinic.Abstract.wasm": "sha256-4YnNtbcxLj+p+86e9eLxCKoA70mcxz0KzprcmnQEquk=",
+      "SLK.XClinic.ModuleEmployeeBlazor.wasm": "sha256-8w+U69ZTUSXSBjjepllpJxq/OM6lTkHbftzaLURZK7c=",
+      "SLK.XClinic.ModuleEmployeeCore.wasm": "sha256-urbdfc+jC3NDuJhV2Q0vYmwLQqgU4nH1zLJX8PNrnuQ=",
+      "SLK.XClinic.ModuleManagementBlazor.wasm": "sha256-Bb2JQmdjEqJais9ao2xBshmDDKhPH+805Hf8JpVvEFg=",
+      "SLK.XClinic.ModuleManagementCore.wasm": "sha256-9dJxrAdWi8IaEs1N+qjz7YQqw285278sTGdm3+C+PrU=",
+      "SLK.XClinic.ModuleSettingBlazor.wasm": "sha256-eAoOnTmnRIxnU2Qazre86D2NTemcHFszSnQJX4Ic4Rw=",
+      "SLK.XClinic.ModuleSettingCore.wasm": "sha256-kHCqRw0Qyh+VLiqPYVnSrwtsrOv1ver5pNJPcQskCRA=",
+      "SLK.XClinic.ModuleVeternayBlazor.wasm": "sha256-sH+lDUFp6znQ53F2nE8tOmiVHJJvIsPpTv8i65B/hYo=",
+      "SLK.XClinic.ModuleVeternayCore.wasm": "sha256-7oWN8jo2s7s21KfVh19nCr9vx+VFuZKkq3Y8gwCutUo=",
+      "SLK.XClinic.WebApp.wasm": "sha256-6qbZHKfWzi9nEmcmeLDbQAlnShLgwG+4UOTO1hAoODo="
     },
     "pdb": {
-      "SLK.XClinic.WebApp.pdb": "sha256-EGGPyKWUy4X6m3CImb2t9PCYF6YRZvZOwiUlUVvusTA="
+      "SLK.XClinic.WebApp.pdb": "sha256-/wVZsVbbfpbWjqJ32Y28q4xSdypdRdkPFliXktOIz2k="
     }
   },
   "cacheBootResources": true,
   "debugLevel": -1,
   "appsettings": [
-    "../appsettings.json",
-    "../appsettings.Development.json"
+    "../appsettings.Development.json",
+    "../appsettings.json"
   ],
   "globalizationMode": "sharded",
   "extensions": {

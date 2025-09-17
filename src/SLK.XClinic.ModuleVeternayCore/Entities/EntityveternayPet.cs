@@ -16,7 +16,6 @@ public class EntityveternayPet : EntityBase
     public string Name { get; set; } = string.Empty;
     [Required(ErrorMessage = "Loại thú cưng là bắt buộc.")]
     public string Species { get; set; }
-
     public string Breed { get; set; }
     [Range(0, 100, ErrorMessage = "Tuổi phải từ 0 đến 100.")]
     public int Age { get; set; }

@@ -31,9 +31,9 @@
                        <div class="row">
                             <div class="col-lg-12">
                                 <div class="row">
-                                    <label for="name" class="col-md-12 col-form-label">Họ và tên</label>
+                                    <label for="name" class="col-md-12 col-form-label">Họ và tên*</label>
                                     <div class="col-md-12">
-                                        <SfTextBox Placeholder="Họ đệm" @bind-Value="_model.FullName" />
+                                        <SfTextBox Placeholder="Họ và tên" @bind-Value="_model.FullName" />
                                         <CustomValidationMessage style="color: red;" For="@(() => _model.FullName)" />
                                     </div>
                                 </div>
@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-lg-12">
                                 <div class="row">
-                                    <label for="phone" class="col-md-12 col-form-label">Phone</label>
+                                    <label for="phone" class="col-md-12 col-form-label">Phone*</label>
                                     <div class="col-md-12">
                                         <SfTextBox Placeholder="Phone" @bind-Value="_model.Phone" />
                                         <CustomValidationMessage style="color: red;" For="@(() => _model.Phone)" />
@@ -77,8 +77,7 @@
                        </div>
                     </div>
                     <div class="col-lg-6">
-                        <h4 class="mb-3">Thú Cưng</h4>
-                        <button type="button" class="btn btn-primary mb-3" @onclick="AddPest">Thêm Thú Cưng</button>
+                        <button class="bubbly-button" type="button" @onclick="AddPest"> + Thêm Thú Cưng</button>
                         @if (_formPet != null)
                         {
                             <div class="card mb-3">
@@ -147,7 +146,10 @@
                                 {
                                     <li class="list-group-item d-flex justify-content-between align-items-center">
                                         <span>@pet.Name (@pet.Species, @pet.Breed, @pet.Age tuổi, @pet.Gender)</span>
-                                        <a class="btn btn-danger btn-sm" @onclick="() => RemotePet(pet)">Xóa</a>
+                                        <div class="d-flex align-items-center">
+                                            <a class="btn btn-success  btn-sm" @onclick="() => EditPet(pet)">Sửa</a>
+                                            <a class="btn btn-danger btn-sm" @onclick="() => RemotePet(pet)">Xóa</a>
+                                        </div>
                                     </li>
                                 }
                             </ul>
@@ -185,7 +187,7 @@
                 </div>
                 <div class="col-12 col-md-8 col-lg-9 text-right">
                     <div class="btn-group pr-0">
-                        <button class="btn btn-light float-right newplus mr-2" @onclick="NewEmployee_Click"><span class="fas fa-plus"></span> @Text["Employee", "Nhân sự"]</button>
+                        <button class="btn btn-light float-right newplus mr-2" @onclick="NewEmployee_Click"><span class="fas fa-plus"></span> @Text["Customer", "Khách hàng"]</button>
                     </div>
                 </div>
             </div>
@@ -202,7 +204,7 @@
                             <Template>
                                 @{
                                     var item = (context as EntityVeternayCustomer);
-                                    <a href="/employee/profile/@item.Guid" class="fullname">
+                                    <a href="/customer/profile/@item.Guid" class="fullname">
                                         @item.FullName
                                     </a>
                                 }
@@ -210,6 +212,24 @@
                         </GridColumn>
                         <GridColumn Field=@nameof(EntityVeternayCustomer.Phone) HeaderText="@Text[field[nameof(EntityVeternayCustomer.Phone)]]" Width="160"></GridColumn>
                         <GridColumn Field=@nameof(EntityVeternayCustomer.Email) HeaderText="@Text[field[nameof(EntityVeternayCustomer.Email)]]" Width="160"></GridColumn>
+                        <GridColumn Field=@nameof(EntityVeternayCustomer.Pets) HeaderText="@Text[field[nameof(EntityVeternayCustomer.Pets)]]" Width="160">
+                            <Template>
+                                @{
+                                    var pets = context as EntityVeternayCustomer;
+                                }
+                                @if (pets.Pets != null && pets.Pets.Any())
+                                {
+                                    <ul class="list-group mb-3">
+                                        @foreach (var pet in pets.Pets)
+                                        {
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>@pet.Name (@pet.Species, @pet.Breed, @pet.Age tuổi, @pet.Gender)</span>
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                            </Template>
+                        </GridColumn>
                           <GridColumn HeaderText="@Text["Functions", "Chức năng"]" Width="110" TextAlign="TextAlign.Right">
                             <Template>
                                 @{
@@ -229,7 +249,132 @@
         </div>
     }
 </div>
+<style>
+    .bubbly-button {
+        display: inline-block;
+        font-size: 1em;
+        padding: 1em 2em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: rgba(89, 74, 226, 1);
+        color: white;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+        &:focus
+    {
+        outline: 0;
+    }
 
+    &:before, &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        z-index: -1000;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        display: none;
+        top: -75%;
+        background-image: radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, transparent 20%, $button-bg 20%, transparent 30%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%);
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+        //background-position: 0% 80%, -5% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 85% 30%;
+    }
+
+    &:after {
+        display: none;
+        bottom: -75%;
+        background-image: radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, transparent 10%, $button-bg 15%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%), radial-gradient(circle, $button-bg 20%, transparent 20%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+        //background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    &:active {
+        transform: scale(0.9);
+        background-color: darken($button-bg, 5%);
+        box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+    }
+
+    &.animate {
+        &:before
+
+    {
+        display: block;
+        animation: topBubbles ease-in-out 0.75s forwards;
+    }
+
+    &:after {
+        display: block;
+        animation: bottomBubbles ease-in-out 0.75s forwards;
+    }
+
+    }
+    }
+
+
+    @@keyframes topBubbles {
+        0%
+
+    {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+
+    }
+
+    @@keyframes bottomBubbles {
+        0%
+
+    {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+
+    }
+</style>
+<script>
+        var animateButton = function(e) {
+
+      e.preventDefault;
+      e.target.classList.remove('animate');
+
+      e.target.classList.add('animate');
+      setTimeout(function(){
+        e.target.classList.remove('animate');
+      },700);
+    };
+
+    var bubblyButtons = document.getElementsByClassName("bubbly-button");
+
+    for (var i = 0; i < bubblyButtons.length; i++) {
+      bubblyButtons[i].addEventListener('click', animateButton, false);
+    }
+</script>
 @code {
     #region vavariables
     [Parameter]
@@ -241,13 +386,12 @@
     private List<OptionItem<Guid>> _optJob = new();
     private EntityveternayPet _formPet = null;
     private EntityVeternayCustomer _model = new();
+    private EntityveternayPet _editPets = null;
     private bool active = false;
     private bool _modalVisible = false;
     private bool _filter = false;
     private string _modalTitle;
     private bool _add_Pets  = false;
-    private List<OptionDual<string>> _genderOptionsList => @BasicCodes.GenderOptions.ToList();
-    private List<OptionDual<string>> _petSpeciesOptions => @BasicCodes.PetSpeciesOptions.ToList();
     private string _filterSearch;
     #endregion
     #region events
@@ -269,6 +413,8 @@
     private void OnModalClosed(Object args)
     {
         _model = new EntityVeternayCustomer();
+        _formPet = null;
+        _editPets = null;
     }
     #endregion
 
@@ -297,7 +443,11 @@
         _modalVisible = false;
         _ = swal.Loading("Lưu thông tin..");
 
-
+        if (string.IsNullOrWhiteSpace(_model.FullName) || string.IsNullOrWhiteSpace(_model.Phone) )
+        {
+            _ = swal.Error("Vui lòng điền đầy đủ thông tin KH bắt buộc (*).");
+            return;
+        }
         var rsp = await AppStatic.CallApi(() => _svc.Save(_model));
         if (!rsp.Success)
         {
@@ -340,6 +490,7 @@
     private void AddPest()
     {
         _formPet = new();
+        _editPets = null;
     }
     private void SavePet()
     {
@@ -350,11 +501,36 @@
                 _ = swal.Error("Vui lòng điền đầy đủ thông tin bắt buộc (Tên, Loại, Giới tính).");
                 return;
             }
-            _formPet.Guid = Guid.NewGuid();
-            _model.Pets.Add(_formPet);
+            if(_editPets != null)
+            {
+                _model.Pets.Remove(_editPets);
+                _model.Pets.Add(_formPet);
+
+            }else
+            {
+                _formPet.Guid = Guid.NewGuid();
+                _model.Pets.Add(_formPet);
+
+            }
+            _editPets = null;
             _formPet = null;
             StateHasChanged();
         }
+    }
+    private void EditPet(EntityveternayPet pet)
+    {
+        _formPet = new()
+        {
+            Guid = pet.Guid,
+            Name = pet.Name,
+            Species = pet.Species,
+            Breed = pet.Breed,
+            Age = pet.Age,
+            Gender = pet.Gender,
+            MedicalNotes = pet.MedicalNotes
+        };
+        _editPets = pet;
+        StateHasChanged();
     }
     private void CancePet()
     {

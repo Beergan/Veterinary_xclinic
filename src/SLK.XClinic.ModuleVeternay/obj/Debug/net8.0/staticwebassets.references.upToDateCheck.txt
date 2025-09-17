@@ -31,3 +31,9 @@ C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json

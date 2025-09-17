@@ -52,7 +52,7 @@ public class VeternayCustomersService : MyServiceBase, IVeternayCustomer
             return ResultsOf<EntityVeternayCustomer>.Error(_ctx.Text["You are not authorized!", "Bạn không có quyền!"]);
         try
         {
-            var data = await _ctx.Set<EntityVeternayCustomer>().ToListAsync();
+            var data = await _ctx.Set<EntityVeternayCustomer>().Include(x => x.Pets).ToListAsync();
 
             return ResultsOf<EntityVeternayCustomer>.Ok(data);
         }
@@ -91,14 +91,13 @@ public class VeternayCustomersService : MyServiceBase, IVeternayCustomer
             }
             else
             {
-                if (info.Guid == Guid.Empty)
-                {
-                    foreach(var item in info.Pets.EmptyIfNull())
+                info.Guid = Guid.NewGuid();
+                foreach (var item in info.Pets)
                     {
                         item.GuidCustomer = info.Guid;
                     }
                     await _ctx.Repo<EntityVeternayCustomer>().Insert(info);
-                }
+                
             }
 
             return Result.Ok();

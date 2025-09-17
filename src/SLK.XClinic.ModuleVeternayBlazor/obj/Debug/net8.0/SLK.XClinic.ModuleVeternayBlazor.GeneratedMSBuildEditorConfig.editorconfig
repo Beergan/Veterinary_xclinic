@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/SLK/Veterinary_xclinic/src/SLK.XClinic.ModuleVeternayBlazor/Pages/PageCustomer.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZUN1c3RvbWVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/SLK/Veterinary_xclinic/src/SLK.XClinic.ModuleVeternayBlazor/Pages/PageListVeternay.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFnZUxpc3RWZXRlcm5heS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

@@ -64,3 +64,4 @@ C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\SLK.XClinic.ModuleVeternayBlazor.dll
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\refint\SLK.XClinic.ModuleVeternayBlazor.dll
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\ref\SLK.XClinic.ModuleVeternayBlazor.dll
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleVeternayBlazor\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
