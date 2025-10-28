@@ -415,8 +415,8 @@
 
     private async void OnFormSubmit()
     {
-        var checkdate = _displaySource.Where(x => x.AppointmentDate == _model.AppointmentDate && x.Status != "Cancel");
-        if (checkdate.Any())
+        var checkdate = _displaySource.FirstOrDefault(x => x.AppointmentDate == _model.AppointmentDate && x.Status != "Cancel" && x.Id != _model.Id);
+        if (checkdate != null)
         {
             _ = swal.Error("Đã trùng lịch đăng ký");
             return;
