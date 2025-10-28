@@ -456,8 +456,17 @@
 
     private async void OnFormSubmit()
     {
-      
-   
+
+        if (!string.IsNullOrEmpty(_model.Phone))
+        {
+            var checkPhone = _dataSource.FirstOrDefault(x => x.Phone == _model.Phone && x.Id != _model.Id);
+            if (checkPhone != null)
+            {
+                _ = swal.Error("Số điện thoại đã được sự dụng!");
+                return;
+            }
+        }
+
         if (_editPets != null)
         {
             _ = swal.Error("Vui lòng lưu thông tin thú cưng!");
