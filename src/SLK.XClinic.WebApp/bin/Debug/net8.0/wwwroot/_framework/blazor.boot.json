@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "SLK.XClinic.WebApp",
   "resources": {
-    "hash": "sha256-aAOuhD2Llp0Mdh9Dhmyn96qUqEwiaK5ISVAi58WcxP4=",
+    "hash": "sha256-gI+mxqREizeycBYD7jP1PXo4zuH4MfAI8EnOQ/cFpPY=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-9Fzd5We95Rp03dEKIAbYjPDR3eWyLbmjMlYStvxyiok="
     },
@@ -310,12 +310,12 @@
       "SLK.XClinic.ModuleManagementCore.wasm": "sha256-xv8eqvY0bS/qOTb644sKlzpWnYfelKF8m6DJ9Yn5J/w=",
       "SLK.XClinic.ModuleSettingBlazor.wasm": "sha256-PKHKRS2AaLPgnxPKtpf2ie5Xpv4HKnQG6c/gIxH/9NU=",
       "SLK.XClinic.ModuleSettingCore.wasm": "sha256-FZuQAeC36V+nL/X6zi7mM1MN2drOHHgSYMGGWcxwhLo=",
-      "SLK.XClinic.ModuleVeternayBlazor.wasm": "sha256-1c/sccXvFFutH6CaA+2CZUHqGIRcylbNUR9PTqZMkrk=",
+      "SLK.XClinic.ModuleVeternayBlazor.wasm": "sha256-d0WpLysaRUriLL0GEiTQcgxBJ2adJ3HniwnKuv6fejI=",
       "SLK.XClinic.ModuleVeternayCore.wasm": "sha256-pWDaeoKWhB5jY9PANb/U/RgivltmFk0PwqDv5ExabcU=",
-      "SLK.XClinic.WebApp.wasm": "sha256-8crWdF8wXuG1HCtRni6iM3Qu5wroEFQZpt2lnlViGNU="
+      "SLK.XClinic.WebApp.wasm": "sha256-oqFGzPg5hPXF6+nK1bVJhyINV1iA9mgj6dDE1t9XI/s="
     },
     "pdb": {
-      "SLK.XClinic.WebApp.pdb": "sha256-BKlKIMGI4JilFZfMrqxAikZal+Yq/bB+G5UESpiT4i8="
+      "SLK.XClinic.WebApp.pdb": "sha256-YQgJX5VycI1Gfrm2g1PN2cNxsIcPouLl8GZ4hT8JcpI="
     }
   },
   "cacheBootResources": true,

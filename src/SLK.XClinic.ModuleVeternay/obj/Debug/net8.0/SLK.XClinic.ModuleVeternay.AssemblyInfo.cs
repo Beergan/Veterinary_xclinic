@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SLK.XClinic.ModuleVeternay")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a26815d200b97db8ef452ef22d9d91c2f63d8720")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8bc7173d9befffee17e6217ba8498105724461e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("SLK.XClinic.ModuleVeternay")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SLK.XClinic.ModuleVeternay")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

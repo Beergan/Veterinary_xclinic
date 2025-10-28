@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\SLK\\Veterinary_xclinic\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\pagecustomer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|solutionrelative:slk.xclinic.moduleveternayblazor\\pages\\pagecustomer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\listbooking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|solutionrelative:slk.xclinic.moduleveternayblazor\\pages\\listbooking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\pagecustomer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|solutionrelative:slk.xclinic.moduleveternayblazor\\pages\\pagecustomer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\pagelistveternay.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -793,17 +793,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ListBooking.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
               "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
               "RelativeToolTip": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
-              "ViewState": "AgIAAOQAAAAAAAAAAAAcwPMAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAIABAAAAAAAAAAAcwKEBAACVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-24T10:37:02.905Z",
               "IsPinned": true,
@@ -835,7 +835,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PageCustomer.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageCustomer.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageCustomer.razor",
@@ -893,8 +893,7 @@
               "RelativeToolTip": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageListVeternay.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAANEBAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-15T07:10:33.669Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T07:10:33.669Z"
             },
             {
               "$type": "Document",
