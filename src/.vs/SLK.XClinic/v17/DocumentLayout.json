@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\SLK\\Veterinary_xclinic\\src\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\pagelistveternay.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|solutionrelative:slk.xclinic.moduleveternayblazor\\pages\\pagelistveternay.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\pagecustomer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|solutionrelative:slk.xclinic.moduleveternayblazor\\pages\\pagecustomer.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\listbooking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|solutionrelative:slk.xclinic.moduleveternayblazor\\pages\\listbooking.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternayblazor\\pages\\pagelistveternay.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{86BD2CE3-20D5-06A9-5E0E-0DD892313478}|SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj|solutionrelative:slk.xclinic.moduleveternayblazor\\pages\\pagelistveternay.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57AD74CD-295C-6A48-6829-976F100DAEA0}|SLK.XClinic.ModuleVeternay\\SLK.XClinic.ModuleVeternay.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternay\\services\\settingbookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -349,10 +349,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7C759477-F4C0-365D-EB3D-220A2F02CE01}|SLK.XClinic.WebHost\\SLK.XClinic.WebHost.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.webhost\\wwwroot\\assets\\customer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{7C759477-F4C0-365D-EB3D-220A2F02CE01}|SLK.XClinic.WebHost\\SLK.XClinic.WebHost.csproj|solutionrelative:slk.xclinic.webhost\\wwwroot\\assets\\customer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{87F12602-DBCB-482C-29B2-2D7802CAB538}|SLK.XClinic.ModuleVeternayCore\\SLK.XClinic.ModuleVeternayCore.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.moduleveternaycore\\interfaces\\isettingbookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{87F12602-DBCB-482C-29B2-2D7802CAB538}|SLK.XClinic.ModuleVeternayCore\\SLK.XClinic.ModuleVeternayCore.csproj|solutionrelative:slk.xclinic.moduleveternaycore\\interfaces\\isettingbookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{234D9448-04A9-6437-1005-EFAF229DD90B}|SLK.XClinic.Abstract\\SLK.XClinic.Abstract.csproj|c:\\slk\\veterinary_xclinic\\src\\slk.xclinic.abstract\\entities\\entitybase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -797,33 +793,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ListBooking.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
               "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
               "RelativeToolTip": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\ListBooking.razor",
-              "ViewState": "AgIAAGIBAAAAAAAAAAAAAHwBAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAcwPMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-24T10:37:02.905Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SettingPetsService.cs",
-              "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
-              "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
-              "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
-              "RelativeToolTip": "SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T02:34:09.467Z"
             },
             {
               "$type": "Document",
@@ -851,13 +835,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PageCustomer.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageCustomer.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageCustomer.razor",
               "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageCustomer.razor",
               "RelativeToolTip": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageCustomer.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOABAAAAAAAAAAAUwPsBAACRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-10-01T04:26:25.641Z",
               "EditorCaption": ""
@@ -882,9 +866,10 @@
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternay\\Services\\SettingBookingService.cs",
               "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternay\\Services\\SettingBookingService.cs",
               "RelativeToolTip": "SLK.XClinic.ModuleVeternay\\Services\\SettingBookingService.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAArwFoAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswHwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-25T06:44:48.579Z"
+              "WhenOpened": "2025-09-25T06:44:48.579Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -900,16 +885,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PageListVeternay.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageListVeternay.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageListVeternay.razor",
               "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageListVeternay.razor",
               "RelativeToolTip": "SLK.XClinic.ModuleVeternayBlazor\\Pages\\PageListVeternay.razor",
-              "ViewState": "AgIAALkBAAAAAAAAAAAAANEBAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANEBAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-09-15T07:10:33.669Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SettingPetsService.cs",
+              "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
+              "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
+              "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
+              "RelativeToolTip": "SLK.XClinic.ModuleVeternay\\Services\\SettingPetsService.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T02:34:09.467Z"
             },
             {
               "$type": "Document",
@@ -1305,7 +1302,8 @@
               "RelativeToolTip": "SLK.XClinic.WebApp\\Components\\Layout\\AppShellLayout.razor",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-18T04:40:06.042Z"
+              "WhenOpened": "2025-09-18T04:40:06.042Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1413,7 +1411,8 @@
               "RelativeToolTip": "SLK.XClinic.WebApp\\Services\\WasmAuthService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T04:01:42.288Z"
+              "WhenOpened": "2025-10-09T04:01:42.288Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1849,18 +1848,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 87,
-              "Title": "ISettingBookingService.cs",
-              "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayCore\\Interfaces\\ISettingBookingService.cs",
-              "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayCore\\Interfaces\\ISettingBookingService.cs",
-              "ToolTip": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayCore\\Interfaces\\ISettingBookingService.cs",
-              "RelativeToolTip": "SLK.XClinic.ModuleVeternayCore\\Interfaces\\ISettingBookingService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T06:36:49.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 88,
               "Title": "EntityBase.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Entities\\EntityBase.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Entities\\EntityBase.cs",
@@ -1872,7 +1859,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 88,
               "Title": "QueryListService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Queries\\QueryListService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Queries\\QueryListService.cs",
@@ -1884,7 +1871,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 89,
               "Title": "ISettingPetsService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayCore\\Interfaces\\ISettingPetsService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayCore\\Interfaces\\ISettingPetsService.cs",
@@ -1896,7 +1883,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 90,
               "Title": "Renderer.cs",
               "DocumentMoniker": "C:\\Users\\dh519\\AppData\\Local\\Temp\\.vsdbgsrc\\630945d235069757175e8ce5840107e7e651b7b76bc3487a4ea12e08e667afb4\\Renderer.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Users\\dh519\\AppData\\Local\\Temp\\.vsdbgsrc\\630945d235069757175e8ce5840107e7e651b7b76bc3487a4ea12e08e667afb4\\Renderer.cs",
@@ -1908,7 +1895,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 91,
               "Title": "SweetAlertServerService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Classes\\SweetAlertServerService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Classes\\SweetAlertServerService.cs",
@@ -1920,7 +1907,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 92,
               "Title": "PersistingRevalidatingAuthenticationStateProvider.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Classes\\PersistingRevalidatingAuthenticationStateProvider.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Classes\\PersistingRevalidatingAuthenticationStateProvider.cs",
@@ -1932,7 +1919,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 93,
               "Title": "CircuitHandlerService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Services\\CircuitHandlerService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Services\\CircuitHandlerService.cs",
@@ -1944,7 +1931,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 94,
               "Title": "INotifyService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Interfaces\\INotifyService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Interfaces\\INotifyService.cs",
@@ -1956,7 +1943,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 95,
               "Title": "IEntity.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Interfaces\\IEntity.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Interfaces\\IEntity.cs",
@@ -1968,7 +1955,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 96,
               "Title": "IServiceInvoker.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Interfaces\\IServiceInvoker.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Interfaces\\IServiceInvoker.cs",
@@ -1980,7 +1967,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 97,
               "Title": "ModelRole.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\ModelRole.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\ModelRole.cs",
@@ -1992,7 +1979,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 99,
               "Title": "SLK.XClinic.ModuleSetting.csproj",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSetting\\SLK.XClinic.ModuleSetting.csproj",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSetting\\SLK.XClinic.ModuleSetting.csproj",
@@ -2004,7 +1991,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 98,
               "Title": "InfoUser.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\InfoUser.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\InfoUser.cs",
@@ -2016,7 +2003,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 100,
               "Title": "TextTranslatorForServer.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Classes\\TextTranslatorForServer.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Classes\\TextTranslatorForServer.cs",
@@ -2028,7 +2015,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 101,
               "Title": "QueryOptionJob.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Queries\\QueryOptionJob.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Queries\\QueryOptionJob.cs",
@@ -2040,7 +2027,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 102,
               "Title": "QryHandlerListEmployeeAccount.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployee\\Queries\\QryHandlerListEmployeeAccount.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployee\\Queries\\QryHandlerListEmployeeAccount.cs",
@@ -2052,7 +2039,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 103,
               "Title": "QueryOptionPermissions.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Queries\\QueryOptionPermissions.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Queries\\QueryOptionPermissions.cs",
@@ -2064,7 +2051,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 104,
               "Title": "QueryOptionEmployees.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Queries\\QueryOptionEmployees.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Queries\\QueryOptionEmployees.cs",
@@ -2076,7 +2063,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 105,
               "Title": "QueryOptionOffices.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Queries\\QueryOptionOffices.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Queries\\QueryOptionOffices.cs",
@@ -2088,7 +2075,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 106,
               "Title": "QryHandlerCheckJobExists.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployee\\Queries\\QryHandlerCheckJobExists.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployee\\Queries\\QryHandlerCheckJobExists.cs",
@@ -2100,7 +2087,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 107,
               "Title": "ModelEmployeeAccount.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\ModelEmployeeAccount.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\ModelEmployeeAccount.cs",
@@ -2112,7 +2099,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 108,
               "Title": "ModelInfoEmployee.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\ModelInfoEmployee.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\ModelInfoEmployee.cs",
@@ -2124,7 +2111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 109,
               "Title": "EntityRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSetting\\Classes\\EntityRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSetting\\Classes\\EntityRegister.cs",
@@ -2136,7 +2123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 110,
               "Title": "SLK.XClinic.ModuleEmployeeCore.csproj",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployeeCore\\SLK.XClinic.ModuleEmployeeCore.csproj",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployeeCore\\SLK.XClinic.ModuleEmployeeCore.csproj",
@@ -2148,7 +2135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 112,
               "Title": "PageJob.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSettingBlazor\\Pages\\PageJob.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSettingBlazor\\Pages\\PageJob.razor",
@@ -2160,7 +2147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 111,
               "Title": "ISettingJobService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSettingCore\\Interfaces\\ISettingJobService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSettingCore\\Interfaces\\ISettingJobService.cs",
@@ -2172,7 +2159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 113,
               "Title": "PageOffices.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSettingBlazor\\Pages\\PageOffices.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSettingBlazor\\Pages\\PageOffices.razor",
@@ -2184,7 +2171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 114,
               "Title": "VeternayCustomersController.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternay\\Controllers\\VeternayCustomersController.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternay\\Controllers\\VeternayCustomersController.cs",
@@ -2196,7 +2183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 115,
               "Title": "SLK.XClinic.ModuleVeternayBlazor.csproj",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayBlazor\\SLK.XClinic.ModuleVeternayBlazor.csproj",
@@ -2208,7 +2195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 116,
               "Title": "_Imports.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayBlazor\\_Imports.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayBlazor\\_Imports.razor",
@@ -2220,7 +2207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 117,
               "Title": "BasicCodes.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\BasicCodes\\BasicCodes.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\BasicCodes\\BasicCodes.cs",
@@ -2232,7 +2219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 118,
               "Title": "QryHandlerOptionEmployees.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployee\\Queries\\QryHandlerOptionEmployees.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployee\\Queries\\QryHandlerOptionEmployees.cs",
@@ -2244,7 +2231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 119,
               "Title": "MyHeaderItem.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\Shared\\MyHeaderItem.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\Shared\\MyHeaderItem.razor",
@@ -2256,7 +2243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 120,
               "Title": "SLK.XClinic.WebApp.csproj",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\SLK.XClinic.WebApp.csproj",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\SLK.XClinic.WebApp.csproj",
@@ -2268,7 +2255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 121,
               "Title": "MyDataAdaptor.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\Shared\\MyDataAdaptor.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\Shared\\MyDataAdaptor.razor",
@@ -2280,7 +2267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 122,
               "Title": "PageCompany.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSettingBlazor\\Pages\\PageCompany.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSettingBlazor\\Pages\\PageCompany.razor",
@@ -2292,7 +2279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 123,
               "Title": "UserInfo.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\UserInfo.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\UserInfo.cs",
@@ -2304,7 +2291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 124,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\EmailTemplates\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\EmailTemplates\\_Layout.cshtml",
@@ -2316,7 +2303,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 125,
               "Title": "NotifyService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Services\\NotifyService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Services\\NotifyService.cs",
@@ -2328,7 +2315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 126,
               "Title": "CultureService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Services\\CultureService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Services\\CultureService.cs",
@@ -2340,7 +2327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 127,
               "Title": "BlazorSession.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Models\\BlazorSession.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Models\\BlazorSession.cs",
@@ -2352,7 +2339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 128,
               "Title": "MyStringLocalizer.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Classes\\MyStringLocalizer.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Classes\\MyStringLocalizer.cs",
@@ -2364,7 +2351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 129,
               "Title": "MyCookieServer.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Classes\\MyCookieServer.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Classes\\MyCookieServer.cs",
@@ -2376,7 +2363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 130,
               "Title": "Permission.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayCore\\Permission\\Permission.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayCore\\Permission\\Permission.cs",
@@ -2388,7 +2375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 131,
               "Title": "SLK.XClinic.ModuleVeternayCore.csproj",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleVeternayCore\\SLK.XClinic.ModuleVeternayCore.csproj",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleVeternayCore\\SLK.XClinic.ModuleVeternayCore.csproj",
@@ -2400,7 +2387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 132,
               "Title": "EntityRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployee\\Classes\\EntityRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployee\\Classes\\EntityRegister.cs",
@@ -2412,7 +2399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 133,
               "Title": "EntityDatabaseTransaction.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\Utils\\EntityDatabaseTransaction.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\Utils\\EntityDatabaseTransaction.cs",
@@ -2424,7 +2411,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 134,
               "Title": "DbMssqlContext.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbMssql\\Context\\DbMssqlContext.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbMssql\\Context\\DbMssqlContext.cs",
@@ -2436,7 +2423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 135,
               "Title": "ModuleBlazorRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployeeBlazor\\Classes\\ModuleBlazorRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployeeBlazor\\Classes\\ModuleBlazorRegister.cs",
@@ -2448,7 +2435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 136,
               "Title": "IEmployeeService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployeeCore\\Interfaces\\IEmployeeService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployeeCore\\Interfaces\\IEmployeeService.cs",
@@ -2460,7 +2447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 137,
               "Title": "Permission.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployeeCore\\Permission\\Permission.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployeeCore\\Permission\\Permission.cs",
@@ -2472,7 +2459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 138,
               "Title": "ModuleAspNetRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployee\\Classes\\ModuleAspNetRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployee\\Classes\\ModuleAspNetRegister.cs",
@@ -2484,7 +2471,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 139,
               "Title": "ModuleAspNetRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSetting\\Classes\\ModuleAspNetRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSetting\\Classes\\ModuleAspNetRegister.cs",
@@ -2496,7 +2483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 140,
               "Title": "DbMssqlContextFactory.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbMssql\\Context\\DbMssqlContextFactory.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbMssql\\Context\\DbMssqlContextFactory.cs",
@@ -2508,7 +2495,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 141,
               "Title": "ModuleBlazorRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSettingBlazor\\Classes\\ModuleBlazorRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSettingBlazor\\Classes\\ModuleBlazorRegister.cs",
@@ -2520,7 +2507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 142,
               "Title": "ModuleBlazorRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleManagementBlazor\\Classes\\ModuleBlazorRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleManagementBlazor\\Classes\\ModuleBlazorRegister.cs",
@@ -2532,7 +2519,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 143,
               "Title": "SessionId.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Services\\SessionId.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Services\\SessionId.cs",
@@ -2544,7 +2531,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 144,
               "Title": "NotifyHub.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Classes\\NotifyHub.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Classes\\NotifyHub.cs",
@@ -2556,7 +2543,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 145,
               "Title": "StartupUtil.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebHost\\Classes\\StartupUtil.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebHost\\Classes\\StartupUtil.cs",
@@ -2564,11 +2551,12 @@
               "RelativeToolTip": "SLK.XClinic.WebHost\\Classes\\StartupUtil.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAAwDEAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T02:43:38.67Z"
+              "WhenOpened": "2025-09-15T02:43:38.67Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 146,
               "Title": "EntityOffice.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSettingCore\\Entities\\EntityOffice.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSettingCore\\Entities\\EntityOffice.cs",
@@ -2580,7 +2568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 147,
               "Title": "EntityCompany.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleSettingCore\\Entities\\EntityCompany.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleSettingCore\\Entities\\EntityCompany.cs",
@@ -2592,7 +2580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 149,
               "Title": "SLK.XClinic.ModuleEmployeeBlazor.csproj",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployeeBlazor\\SLK.XClinic.ModuleEmployeeBlazor.csproj",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployeeBlazor\\SLK.XClinic.ModuleEmployeeBlazor.csproj",
@@ -2604,7 +2592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 148,
               "Title": "ModelEmployeeDocument.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployeeCore\\Models\\ModelEmployeeDocument.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployeeCore\\Models\\ModelEmployeeDocument.cs",
@@ -2616,7 +2604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 151,
+              "DocumentIndex": 150,
               "Title": "EntityEmployeeDocument.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.ModuleEmployeeCore\\Entities\\EntityEmployeeDocument.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.ModuleEmployeeCore\\Entities\\EntityEmployeeDocument.cs",
@@ -2628,7 +2616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 153,
+              "DocumentIndex": 152,
               "Title": "ICacheService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\Cache\\ICacheService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\Cache\\ICacheService.cs",
@@ -2640,7 +2628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 152,
+              "DocumentIndex": 151,
               "Title": "MemoryCacheService.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\Cache\\MemoryCacheService.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\Cache\\MemoryCacheService.cs",
@@ -2652,7 +2640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 154,
+              "DocumentIndex": 153,
               "Title": "CacheRepository.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\Cache\\CacheRepository.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\Cache\\CacheRepository.cs",
@@ -2664,7 +2652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 155,
+              "DocumentIndex": 154,
               "Title": "CacheMode.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\Cache\\CacheMode.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\Cache\\CacheMode.cs",
@@ -2676,7 +2664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 156,
+              "DocumentIndex": 155,
               "Title": "CacheConfiguration.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\Cache\\CacheConfiguration.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\Cache\\CacheConfiguration.cs",
@@ -2688,7 +2676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 157,
+              "DocumentIndex": 156,
               "Title": "OptionDual.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\OptionDual.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\OptionDual.cs",
@@ -2700,7 +2688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 158,
+              "DocumentIndex": 157,
               "Title": "ModelUserAccount.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\ModelUserAccount.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\ModelUserAccount.cs",
@@ -2712,7 +2700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 159,
+              "DocumentIndex": 158,
               "Title": "ModelSubmitSample.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\ModelSubmitSample.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\ModelSubmitSample.cs",
@@ -2724,7 +2712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 160,
+              "DocumentIndex": 159,
               "Title": "RspLogin.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\RspLogin.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\RspLogin.cs",
@@ -2736,7 +2724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 161,
+              "DocumentIndex": 160,
               "Title": "TenantInfo.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\TenantInfo.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\TenantInfo.cs",
@@ -2748,7 +2736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 162,
+              "DocumentIndex": 161,
               "Title": "IAssemblyProvider.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Interfaces\\IAssemblyProvider.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Interfaces\\IAssemblyProvider.cs",
@@ -2760,7 +2748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 163,
+              "DocumentIndex": 162,
               "Title": "IBlazorContext.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Interfaces\\IBlazorContext.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Interfaces\\IBlazorContext.cs",
@@ -2772,7 +2760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 164,
+              "DocumentIndex": 163,
               "Title": "SyncfusionLicense.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\SyncfusionLicense.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\SyncfusionLicense.cs",
@@ -2784,7 +2772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 165,
+              "DocumentIndex": 164,
               "Title": "UserInfoHeader.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\Shared\\UserInfoHeader.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\Shared\\UserInfoHeader.razor",
@@ -2796,7 +2784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 166,
+              "DocumentIndex": 165,
               "Title": "RuntimeHeader.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\Shared\\RuntimeHeader.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\Shared\\RuntimeHeader.razor",
@@ -2808,7 +2796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 167,
+              "DocumentIndex": 166,
               "Title": "NotificationHeader.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\Shared\\NotificationHeader.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\Shared\\NotificationHeader.razor",
@@ -2820,7 +2808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 168,
+              "DocumentIndex": 167,
               "Title": "Modal.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\Shared\\Modal.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\Shared\\Modal.razor",
@@ -2832,7 +2820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 169,
+              "DocumentIndex": 168,
               "Title": "Loading.razor",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.WebApp\\Shared\\Loading.razor",
               "RelativeDocumentMoniker": "SLK.XClinic.WebApp\\Shared\\Loading.razor",
@@ -2844,7 +2832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 170,
+              "DocumentIndex": 169,
               "Title": "StringHelper.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Utils\\StringHelper.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Utils\\StringHelper.cs",
@@ -2856,7 +2844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 171,
+              "DocumentIndex": 170,
               "Title": "StaticResolver.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Utils\\StaticResolver.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Utils\\StaticResolver.cs",
@@ -2868,7 +2856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 173,
+              "DocumentIndex": 172,
               "Title": "Event_NewMonth.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Events\\Event_NewMonth.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Events\\Event_NewMonth.cs",
@@ -2880,7 +2868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 174,
+              "DocumentIndex": 173,
               "Title": "ICacheRepository.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Interfaces\\ICacheRepository.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Interfaces\\ICacheRepository.cs",
@@ -2892,7 +2880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 175,
+              "DocumentIndex": 174,
               "Title": "IDatabaseTransaction.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Interfaces\\IDatabaseTransaction.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Interfaces\\IDatabaseTransaction.cs",
@@ -2904,7 +2892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 176,
+              "DocumentIndex": 175,
               "Title": "IDbContext.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Interfaces\\IDbContext.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Interfaces\\IDbContext.cs",
@@ -2916,7 +2904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 172,
+              "DocumentIndex": 171,
               "Title": "SA_USER .cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\Entities\\SA_USER .cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\Entities\\SA_USER .cs",
@@ -2928,7 +2916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 177,
+              "DocumentIndex": 176,
               "Title": "MediatorSerializedObject.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\MediatR\\MediatorSerializedObject.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\MediatR\\MediatorSerializedObject.cs",
@@ -2940,7 +2928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 178,
+              "DocumentIndex": 177,
               "Title": "MediatorHangfireBridge.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\MediatR\\MediatorHangfireBridge.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\MediatR\\MediatorHangfireBridge.cs",
@@ -2952,7 +2940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 179,
+              "DocumentIndex": 178,
               "Title": "MediatorExtensions.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Base\\MediatR\\MediatorExtensions.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Base\\MediatR\\MediatorExtensions.cs",
@@ -2964,7 +2952,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 180,
+              "DocumentIndex": 179,
               "Title": "DbMemoryContext.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbMemory\\Context\\DbMemoryContext.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbMemory\\Context\\DbMemoryContext.cs",
@@ -2976,7 +2964,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 184,
+              "DocumentIndex": 183,
               "Title": "ClassDiagram.cd",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\ClassDiagram.cd",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\ClassDiagram.cd",
@@ -2988,7 +2976,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 183,
+              "DocumentIndex": 182,
               "Title": "DbPostgresContext.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbPostgres\\Context\\DbPostgresContext.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbPostgres\\Context\\DbPostgresContext.cs",
@@ -3000,7 +2988,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 182,
+              "DocumentIndex": 181,
               "Title": "DbPostgresContextFactory.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbPostgres\\Context\\DbPostgresContextFactory.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbPostgres\\Context\\DbPostgresContextFactory.cs",
@@ -3012,7 +3000,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 181,
+              "DocumentIndex": 180,
               "Title": "DbMysqlContext.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbMysql\\Context\\DbMysqlContext.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbMysql\\Context\\DbMysqlContext.cs",
@@ -3024,7 +3012,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 185,
+              "DocumentIndex": 184,
               "Title": "ConcurrentPartititonedDictionary.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Utils\\ConcurrentPartititonedDictionary.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Utils\\ConcurrentPartititonedDictionary.cs",
@@ -3036,7 +3024,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 186,
+              "DocumentIndex": 185,
               "Title": "CloneHelper.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Utils\\CloneHelper.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Utils\\CloneHelper.cs",
@@ -3048,7 +3036,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 187,
+              "DocumentIndex": 186,
               "Title": "PermissionAttribute.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Permission\\PermissionAttribute.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Permission\\PermissionAttribute.cs",
@@ -3060,7 +3048,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 188,
+              "DocumentIndex": 187,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\LoginRequest.cs",
@@ -3072,7 +3060,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 189,
+              "DocumentIndex": 188,
               "Title": "BlazorSession.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Models\\BlazorSession.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Models\\BlazorSession.cs",
@@ -3084,7 +3072,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 190,
+              "DocumentIndex": 189,
               "Title": "DbMysqlContextFactory.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbMysql\\Context\\DbMysqlContextFactory.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbMysql\\Context\\DbMysqlContextFactory.cs",
@@ -3096,7 +3084,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 191,
+              "DocumentIndex": 190,
               "Title": "DbMysqlRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbMysql\\DbMysqlRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbMysql\\DbMysqlRegister.cs",
@@ -3108,7 +3096,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 192,
+              "DocumentIndex": 191,
               "Title": "DbMemoryRegister.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Db\\DbMemory\\DbMemoryRegister.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Db\\DbMemory\\DbMemoryRegister.cs",
@@ -3120,7 +3108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 193,
+              "DocumentIndex": 192,
               "Title": "EntityPermission.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Entities\\EntityPermission.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Entities\\EntityPermission.cs",
@@ -3132,7 +3120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 194,
+              "DocumentIndex": 193,
               "Title": "EntityNoTifiCation.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Entities\\EntityNoTifiCation.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Entities\\EntityNoTifiCation.cs",
@@ -3144,7 +3132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 195,
+              "DocumentIndex": 194,
               "Title": "EntityJob.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Entities\\EntityJob.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Entities\\EntityJob.cs",
@@ -3156,7 +3144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 196,
+              "DocumentIndex": 195,
               "Title": "AugditLog.cs",
               "DocumentMoniker": "C:\\SLK\\Veterinary_xclinic\\src\\SLK.XClinic.Abstract\\Entities\\AugditLog.cs",
               "RelativeDocumentMoniker": "SLK.XClinic.Abstract\\Entities\\AugditLog.cs",

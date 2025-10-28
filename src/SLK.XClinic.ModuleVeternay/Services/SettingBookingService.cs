@@ -122,8 +122,8 @@ public class SettingBookingService : MyServiceBase, ISettingBookingService
         try
         {
             var item = await _ctx.Set<EntityVeternayBooking>().FindAsync(id);
-
-            await _ctx.Repo<EntityVeternayBooking>().Remove(item);
+            item.Status = "Cancel";
+            await _ctx.Repo<EntityVeternayBooking>().Update(item);
             return Result.Ok();
         }
         catch (Exception ex)

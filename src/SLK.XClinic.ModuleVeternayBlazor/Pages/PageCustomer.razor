@@ -486,6 +486,14 @@
                                                             <p>@pet.Name</p>
                                                         </Template>
                                                     </GridColumn>
+                                                    <GridColumn Field=@nameof(EntityVeternayBooking.Status) HeaderText="@Text["STatus", "Trang thái"]" Width="160">
+                                                        <Template>
+                                                            @{
+                                                                var item = (context as EntityVeternayBooking);
+                                                                <p>@(item.Status == "completed" ? "Đã chuyển hồ sơ" : (item.Status == "Cancel" ? "Hồ sơ đã hủy" : "Chưa xử lý"))</p>
+                                                            }
+                                                        </Template>
+                                                    </GridColumn>
                                                     <GridColumn Field=@nameof(EntityVeternayBooking.TotalAmount) HeaderText="@Text["TotalAmount", "Tổng phí"]" Width="160">
                                                     </GridColumn>
                                                     <GridColumn Field=@nameof(EntityVeternayBooking.Notes) HeaderText="@Text[field[nameof(EntityVeternayBooking.Notes)]]" Width="160"></GridColumn>
@@ -493,6 +501,8 @@
                                                         <Template>
                                                             @{
                                                                 var item = (context as EntityVeternayBooking);
+                                                            @if (item.Status == "Scheduled")
+                                                            {
                                                                 <SfDropDownButton CssClass="e-caret-hide float-right" style="padding-left: 13px;" IconCss="fas fa-ellipsis-v">
                                                                     <DropDownMenuItems>
                                                                         <DropDownButtonEvents ItemSelected="SelectedTask"></DropDownButtonEvents>
@@ -500,6 +510,7 @@
                                                                         <DropDownMenuItem Id="@(item.Id.ToString())" Text="Xóa"></DropDownMenuItem>
                                                                     </DropDownMenuItems>
                                                                 </SfDropDownButton>
+                                                                }
                                                             }
                                                         </Template>
                                                     </GridColumn>

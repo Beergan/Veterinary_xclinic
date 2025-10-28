@@ -229,18 +229,18 @@
                         <GridColumn Field=@nameof(EntityVeternayBooking.AppointmentDate) HeaderText="@Text["Date Booking", "Ngày đăng ký"]" Width="160">
                         </GridColumn>
                         <GridColumn Field=@nameof(EntityVeternayBooking.TotalAmount) HeaderText="@Text["TotalAmount", "Tổng phí"]" Width="160">
+                            <Template>
+                                @{
+                                    var item = (context as EntityVeternayBooking);
+                                }
+                               <p>@item.TotalAmount.ToString("N0") VND</p>
+                            </Template>
                         </GridColumn>
                         <GridColumn Field=@nameof(EntityVeternayBooking.Status) HeaderText="@Text["Status", "Status"]" Width="160">
                             <Template>
                                 @{
                                     var item =  (context as EntityVeternayBooking);
-                                    @if (item.Status == "completed")
-                                    {
-                                        <p>Đã có hồ sơ khám</p>
-                                    }else
-                                    {
-                                        <p>Chưa xử lý</p>
-                                    }
+                                    <p>@(item.Status == "completed" ? "Đã chuyển hồ sơ" : (item.Status == "Cancel" ? "Hồ sơ đã hủy" : "Chưa xử lý"))</p>
                                 }
                             </Template>
                         </GridColumn>
@@ -250,7 +250,7 @@
                             <Template>
                                 @{
                                     var item = (context as EntityVeternayBooking);
-                                    @if (item.Status != "completed")
+                                    @if (item.Status == "Scheduled" )
                                     {
                                         <button type="button" class="btn-pet-action btn-exam" title="Khám" @onclick="() => MeducalRecord(item.Id)">
                                             <span class="plus-icon"></span>
@@ -415,7 +415,7 @@
 
     private async void OnFormSubmit()
     {
-        var checkdate =  _displaySource.Where(x => x.AppointmentDate == _model.AppointmentDate);
+        var checkdate = _displaySource.Where(x => x.AppointmentDate == _model.AppointmentDate && x.Status != "Cancel");
         if (checkdate.Any())
         {
             _ = swal.Error("Đã trùng lịch đăng ký");
@@ -506,7 +506,7 @@
 
     private async void Delete(int id)
     {
-        var confirm = await swal.ConfirmDelete("Xác nhận xoá thông tin");
+        var confirm = await swal.ConfirmDelete("Xác nhận hủy thông tin");
         if (!confirm) return;
 
         _ = swal.Loading("Đang xóa ..");
