@@ -12,8 +12,8 @@ namespace SLK.XClinic.WebHost
 {
     public static class AutoClass
     {
-        public static string MajorMinor = "1.24";
-		public static string FullVersion = "1.24.0605";
+        public static string MajorMinor = "1.25";
+		public static string FullVersion = "1.25.1008";
         public static string BuildName = "#nightly";
     }
 }

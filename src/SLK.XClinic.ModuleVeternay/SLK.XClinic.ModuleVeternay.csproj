@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+<Project Sdk="Microsoft.NET.Sdk.Razor">
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<AddRazorSupportForMvc>true</AddRazorSupportForMvc>
@@ -16,8 +16,5 @@
 	  <ProjectReference Include="..\SLK.XClinic.Base\SLK.XClinic.Base.csproj" />
 	  <ProjectReference Include="..\SLK.XClinic.ModuleVeternayBlazor\SLK.XClinic.ModuleVeternayBlazor.csproj" />
 	  <ProjectReference Include="..\SLK.XClinic.ModuleVeternayCore\SLK.XClinic.ModuleVeternayCore.csproj" />
-	</ItemGroup>
-	<ItemGroup>
-	  <Folder Include="Queries\" />
 	</ItemGroup>
 </Project>

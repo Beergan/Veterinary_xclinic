@@ -1,20 +1,15 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
 html,
 body,
 div#app {
     font-family: 'Roboto', sans-serif;
-    position: fixed;
     width: 100%;
     height: calc(100vh - calc(100vh - 100%));
     overscroll-behavior-y: contain;
 }
-
-body {
-    touch-action: pan-x pan-y;
-}
-
 .container {
     max-width: 1300px !important;
 }
@@ -24,10 +19,6 @@ header nav {
     background-color: #292b2d;
 }
 
-a:hover {
-    color: #ffffff !important;
-    cursor: pointer;
-}
 
 i:hover {
     cursor: pointer;
@@ -544,3 +535,179 @@ label.e-float-input:hover {
     }
 }
 
+.custom-nav-menu {
+    overflow: hidden;
+}
+.nav-header {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 24px 20px;
+    text-align: center;
+    position: relative;
+}
+
+    .nav-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        opacity: 0.6;
+    }
+
+    .nav-header h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    .nav-header .subtitle {
+        font-size: 13px;
+        opacity: 0.9;
+        margin-top: 4px;
+        position: relative;
+        z-index: 1;
+    }
+
+.mud-nav-group {
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+    .mud-nav-group:hover {
+        background: rgba(99, 102, 241, 0.04);
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .mud-nav-group .mud-nav-group-header {
+        background: transparent !important;
+        border-radius: 8px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 500;
+        color: #374151;
+    }
+
+        .mud-nav-group .mud-nav-group-header:hover {
+            background: linear-gradient(90deg, rgba(99, 102, 241, 0.08), transparent) !important;
+            color: #4f46e5;
+        }
+
+    .mud-nav-group.expanded .mud-nav-group-header {
+        background: linear-gradient(90deg, rgba(99, 102, 241, 0.1), transparent) !important;
+        color: #4f46e5;
+        font-weight: 600;
+    }
+
+    .mud-nav-group .mud-nav-group-header .mud-icon {
+        color: #6b7280;
+        transition: all 0.3s ease;
+    }
+
+    .mud-nav-group .mud-nav-group-header:hover .mud-icon,
+    .mud-nav-group.expanded .mud-nav-group-header .mud-icon {
+        color: #4f46e5;
+        transform: scale(1.1);
+    }
+
+.mud-nav-link {
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+    .mud-nav-link::before {
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0;
+        height: 20px;
+        background: linear-gradient(180deg, #4f46e5, #7c3aed);
+        border-radius: 0 2px 2px 0;
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mud-nav-link:hover {
+        background: linear-gradient(90deg, rgba(99, 102, 241, 0.08), rgba(99, 102, 241, 0.02)) !important;
+        color: #4f46e5;
+        transform: translateX(4px);
+    }
+
+        .mud-nav-link:hover::before {
+            width: 3px;
+        }
+
+    .mud-nav-link .mud-icon {
+        color: #9ca3af;
+        transition: all 0.3s ease;
+    }
+
+    .mud-nav-link:hover .mud-icon {
+        color: #4f46e5;
+        transform: scale(1.1);
+    }
+
+    .mud-nav-link.mud-nav-link-active {
+        background: linear-gradient(90deg, rgba(99, 102, 241, 0.12), rgba(99, 102, 241, 0.04)) !important;
+        color: #4f46e5;
+        font-weight: 500;
+    }
+
+        .mud-nav-link.mud-nav-link-active::before {
+            width: 3px;
+        }
+
+        .mud-nav-link.mud-nav-link-active .mud-icon {
+            color: #4f46e5;
+        }
+
+.mud-nav-group-content {
+    background: rgba(248, 250, 252, 0.5);
+    border-left: 2px solid rgba(99, 102, 241, 0.1);
+    margin-left: 20px;
+    padding: 4px 0;
+}
+
+.veterinary-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-top: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+    .veterinary-badge .mud-icon {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.custom-nav-menu {
+    animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}

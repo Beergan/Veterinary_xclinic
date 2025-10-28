@@ -14,9 +14,20 @@ public class EntityRegister : IEntityRegister
         modelBuilder.Entity<EntityVeternayCustomer>().HasAlternateKey(k => k.Guid);
         modelBuilder.Entity<EntityveternayPet>().HasAlternateKey(k => k.Guid);
         modelBuilder.Entity<EntityVeternayBooking>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayBookingService>().HasAlternateKey(k => k.Guid);
         modelBuilder.Entity<EntityVeternayServices>().HasAlternateKey(k => k.Guid);
-        modelBuilder.Entity<EntityVeternayVisit>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayDisease>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayDiseaseType>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayMedicalAttachment>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayMedicalDisease>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayMedicalPrescription>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayMedicalRecord>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayMedicalService>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayMedication>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayPetType>().HasAlternateKey(k => k.Guid);
+        modelBuilder.Entity<EntityVeternayMedicationCategory>().HasAlternateKey(k => k.Guid);
     }
+
     public void Seed(IDbContext db)
     {
         

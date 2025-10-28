@@ -32,12 +32,16 @@ public interface IRepository<T> where T : class
     Task<IList<T>> GetList(Expression<Func<T, bool>> filter);
 
     Task Insert(T entity, bool commit = true);
-
+    Task RemoveRange(IEnumerable<T> entities, bool commit = true);
     Task InsertRange(params T[] entity);
-
+    Task UpdateRange(IEnumerable<T> entities, bool commit = true);
     Task Update(T entity, bool commit = true);
 
     Task Remove(T entity, bool commit = true);
 
+
+    Task UpdateICollection(T entity, bool commit = true);
+
     EntityEntry Attach(T estimate);
+
 }

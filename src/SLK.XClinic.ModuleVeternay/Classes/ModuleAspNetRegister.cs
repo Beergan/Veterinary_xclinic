@@ -17,5 +17,10 @@ public class ModuleAspNetRegister : IModuleAspNet
     public void ConfigureServices(IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration config)
     {
         services.AddScoped<IVeternayCustomer, VeternayCustomersService>();
+        services.AddScoped<ISettingPetsService, SettingPetService>();
+        services.AddScoped<ISettingMedicationService, SettingMedicationService>();
+        services.AddScoped<ISettingServicesService, SettingServicesService>();
+        services.AddScoped<ISettingBookingService, SettingBookingService>();
+        services.AddScoped<IMedicalRecordService, MedicalRecordService>();
     }
 }

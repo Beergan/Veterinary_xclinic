@@ -5,6 +5,6 @@ using SLK.XClinic.Abstract;
 
 namespace SLK.XClinic.Base;
 
-public class QueryOptionJob : IRequest<List<OptionItem<Guid>>>
+public class QueryOptionJob  : IRequest<List<OptionItem<Guid>>>
 {
 }

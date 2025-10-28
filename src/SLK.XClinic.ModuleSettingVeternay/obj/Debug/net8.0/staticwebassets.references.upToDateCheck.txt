@@ -1,0 +1,1 @@
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayBlazor\obj\Debug\net8.0\staticwebassets.build.json

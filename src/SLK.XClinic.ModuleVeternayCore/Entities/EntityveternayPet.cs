@@ -21,9 +21,14 @@ public class EntityveternayPet : EntityBase
     public int Age { get; set; }
     [Required(ErrorMessage = "Giới tính là bắt buộc.")]
     public string Gender { get; set; }              
-    public string Color { get; set; }              
+    public string Color { get; set; }     
+    public int EntityVeternayCustomerId { get; set; }
     public string Microchip { get; set; }           
-    public string MedicalNotes { get; set; }       
+    public string MedicalNotes { get; set; }
     public bool IsDeleted { get; set; } = false;
+    public Guid PetTypeGuid { get; set; }
+    public int ? PetTypeId { get; set; }
+    [ForeignKey("PetTypeId")]
+    public EntityVeternayPetType PetType { get; set; }
 
 }

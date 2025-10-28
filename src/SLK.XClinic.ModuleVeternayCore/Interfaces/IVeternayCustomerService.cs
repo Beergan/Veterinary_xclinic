@@ -15,11 +15,19 @@ public interface IVeternayCustomer : IServiceBase
 
     [Get(nameof(GetList))]
     Task<ResultsOf<EntityVeternayCustomer>> GetList();
-
+    [Get(nameof(GetListPetsType))]
+    Task<ResultsOf<EntityVeternayPetType>> GetListPetsType();
 
     [Post(nameof(Save))]
     Task<Result> Save([Body] EntityVeternayCustomer info);
 
+    [Post(nameof(SavePet))]
+    Task<Result> SavePet([Body] EntityveternayPet pet);
+
     [Get(nameof(SetToActiveEmployee))]
     Task<Result> SetToActiveEmployee(int id, Guid guidEmployee);
+    [Post(nameof(DeletePet))]
+    Task<Result> DeletePet(int id);
+
+
 }

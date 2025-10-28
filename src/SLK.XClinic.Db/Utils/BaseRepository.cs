@@ -81,14 +81,31 @@ public class BaseRepository<T> : IRepository<T> where T : class
 
     public virtual async Task Insert(T entity, bool commit = true)
     {
+        // Ngắt navigation để tránh bị insert trùng
+        foreach (var entry in _dbContext.Entry(entity).Navigations)
+        {
+            if (entry.Metadata.IsCollection)
+            {
+                // Với collection navigation (vd: BookingServices) thì giữ nguyên
+                continue;
+            }
+
+            // Nếu là reference navigation (vd: Customer, Pet...)
+            if (entry.CurrentValue != null)
+            {
+                // Đảm bảo EF không cố insert entity con
+                _dbContext.Entry(entry.CurrentValue).State = EntityState.Unchanged;
+            }
+        }
+
         await DbSet.AddAsync(entity);
 
         if (commit)
         {
             await _dbContext.SaveChangesAsync();
-            //_dbContext.Entry(entity).State = EntityState.Detached;
         }
     }
+
 
     public virtual async Task InsertRange(params T[] entities)
     {
@@ -101,29 +118,62 @@ public class BaseRepository<T> : IRepository<T> where T : class
 
     public virtual async Task Update(T entity, bool commit = true)
     {
-        var idProperty = typeof(T).GetProperty("Id");
-        var entityId = idProperty?.GetValue(entity);
+        _dbContext.Attach(entity);
+        _dbContext.Entry(entity).State = EntityState.Modified;
 
-        var existingEntity = await DbSet.FindAsync(entityId);
-
-        if (existingEntity != null)
+        if (commit)
         {
-            // Đảm bảo entity không bị theo dõi trước khi cập nhật
-            _dbContext.Entry(existingEntity).State = EntityState.Detached;
+            await _dbContext.SaveChangesAsync();
+            _dbContext.Entry(entity).State = EntityState.Detached;
+        }
+    }
 
-            // Cập nhật toàn bộ giá trị
-            _dbContext.Entry(existingEntity).CurrentValues.SetValues(entity);
-            _dbContext.Entry(existingEntity).State = EntityState.Modified;
+
+    public virtual async Task UpdateICollection(T entity, bool commit = true)
+    {
+        _dbContext.ChangeTracker.Clear();
+
+        DbSet.Update(entity);
+
+        if (commit)
+        {
+            await _dbContext.SaveChangesAsync();
+        }
+    }
+    public virtual async Task UpdateRange(IEnumerable<T> entities, bool commit = true)
+    {
+        foreach (var entity in entities)
+        {
+            var idProperty = typeof(T).GetProperty("Id");
+            var entityId = idProperty?.GetValue(entity);
+
+            var existingEntity = await DbSet.FindAsync(entityId);
+
+            if (existingEntity != null)
+            {
+                _dbContext.Entry(existingEntity).CurrentValues.SetValues(entity);
+
+                foreach (var navigation in _dbContext.Entry(existingEntity).Navigations)
+                {
+                    if (!navigation.IsLoaded) continue;
+
+                    var newValue = _dbContext.Entry(entity).Member(navigation.Metadata.Name).CurrentValue;
+                    navigation.CurrentValue = newValue;
+                }
+            }
+            else
+            {
+                DbSet.Attach(entity);
+                _dbContext.Entry(entity).State = EntityState.Modified;
+            }
         }
 
         if (commit)
         {
             await _dbContext.SaveChangesAsync();
-
-            // Detach entity sau khi lưu để tránh lỗi tracking
-            _dbContext.Entry(entity).State = EntityState.Detached;
         }
     }
+
 
     //public virtual async Task UpdateList(List<T> listEntity, bool commit = true)
     //{
@@ -167,6 +217,16 @@ public class BaseRepository<T> : IRepository<T> where T : class
             //_dbContext.Entry(entity).State = EntityState.Detached;
         }
     }
+    public virtual async Task RemoveRange(IEnumerable<T> entities, bool commit = true)
+    {
+        DbSet.RemoveRange(entities);
+
+        if (commit)
+        {
+            await _dbContext.SaveChangesAsync();
+        }
+    }
+
 
     public EntityEntry Attach(T entity)
     {

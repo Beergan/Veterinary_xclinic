@@ -56,6 +56,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <label for="address" class="col-md-12 col-form-label">CCCD</label>
+                                    <div class="col-md-12">
+                                        <SfTextBox Placeholder="Địa chỉ" @bind-Value="_model.CitizenID" />
+                                        <CustomValidationMessage style="color: red;" For="@(() => _model.Address)" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-md-12 mt-lg-3">
+                                       <MudBlazor.MudDatePicker Label="Ngày sinh" @bind-Date="_model.DateOfBirth" DateFormat="dd.MM.yyyy" />
+                                        <CustomValidationMessage style="color: red;" For="@(() => _model.DateOfBirth)" />
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-lg-12">
                                 <div class="row">
                                     <label for="address" class="col-md-12 col-form-label">Địa chỉ</label>
@@ -93,10 +110,10 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label for="petType" class="col-form-label">Loại Thú Cưng</label>
-                                            <SfComboBox  TItem="OptionDual<string>" TValue="string" PopupHeight="230px"
-                                                        @bind-Value="@_formPet.Species" DataSource="@BasicCodes.PetSpeciesOptions">
-                                                <ComboBoxFieldSettings Text="@Text["TextEn", "TextVi"]" Value="Value" />
-                                                <DropDownListEvents TItem="OptionDual<string>" TValue="string" />
+                                            <SfComboBox TItem="EntityVeternayPetType" TValue="string" PopupHeight="230px"
+                                                        @bind-Value="@_formPet.Species" DataSource="_petType">
+                                                <ComboBoxFieldSettings Text="Name" Value="Name" />
+                                                <DropDownListEvents TItem="EntityVeternayPetType" TValue="string" />
                                             </SfComboBox>
                                         </div>
                                     </div>
@@ -137,7 +154,6 @@
                                 </div>
                             </div>
                         }
-                        <!-- Danh sách thú cưng đã thêm -->
                         @if (_model.Pets != null && _model.Pets.Any())
                         {
                             <h5>Danh Sách Thú Cưng</h5>
@@ -156,7 +172,6 @@
                         }
                     </div>
                 </div>
-                
             </EditForm>
         </Content>
     </DialogTemplates>
@@ -172,7 +187,7 @@
             <div class="row" style="padding: 0 0 0 5px">
                 <div class="col-12">
                     <ol class="breadcrumb">
-                        <li>Nhân sự</li>
+                        <li>Khách hàng</li>
                         <li style="color: #777">&nbsp; / &nbsp;</li>
                         <li class="active text-primary"> Danh sách</li>
                     </ol>
@@ -392,6 +407,7 @@
     private bool _filter = false;
     private string _modalTitle;
     private bool _add_Pets  = false;
+    private List<EntityVeternayPetType> _petType = new();
     private string _filterSearch;
     #endregion
     #region events
@@ -428,10 +444,10 @@
             _ = swal.Error(rsp.Message);
             return;
         }
-
+        var rps2 = await AppStatic.CallApi(() => _svc.GetListPetsType());
         active = true;
         _dataSource = rsp.Items;
-
+        _petType = rps2.Items.ToList();
         _displaySource = _dataSource.OrderByDescending(x => x.Id).ToList();
 
         await swal.Close();
@@ -440,15 +456,21 @@
 
     private async void OnFormSubmit()
     {
-        _modalVisible = false;
-        _ = swal.Loading("Lưu thông tin..");
-
+      
+   
+        if (_editPets != null)
+        {
+            _ = swal.Error("Vui lòng lưu thông tin thú cưng!");
+            return;
+        }
         if (string.IsNullOrWhiteSpace(_model.FullName) || string.IsNullOrWhiteSpace(_model.Phone) )
         {
             _ = swal.Error("Vui lòng điền đầy đủ thông tin KH bắt buộc (*).");
             return;
         }
         var rsp = await AppStatic.CallApi(() => _svc.Save(_model));
+        _modalVisible = false;
+        _ = swal.Loading("Lưu thông tin..");
         if (!rsp.Success)
         {
             _ = swal.Error(rsp.Message);
@@ -475,8 +497,8 @@
 
         _modalTitle = "Hiệu chỉnh khách hàng";
         _modalVisible = true;
-
         await Task.CompletedTask;
+        StateHasChanged();
     }
 
     private void SelectedTask(MenuEventArgs e)
@@ -521,6 +543,7 @@
     {
         _formPet = new()
         {
+            Id = pet.Id,
             Guid = pet.Guid,
             Name = pet.Name,
             Species = pet.Species,

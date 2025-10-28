@@ -49,6 +49,7 @@ var cookie = builder.Services.BuildServiceProvider().GetRequiredService<IMyCooki
 string langId = await cookie.GetCookie(nameof(langId), def: "vi");
 builder.Services.AddScoped<ITextTranslator>(sp => new TextTranslatorForWasm(cookie, langId));
 
+
 var baseUri = new Uri(builder.HostEnvironment.BaseAddress);
 var apiBaseUri = new Uri($"{baseUri}api/");
 

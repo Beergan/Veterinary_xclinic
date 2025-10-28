@@ -1,0 +1,572 @@
+﻿@page "/customer/bookings"
+@inject Microsoft.JSInterop.IJSRuntime jSRuntime
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Popups
+@using Syncfusion.Blazor.Inputs
+@using System.Linq
+@using Syncfusion.Blazor.SplitButtons
+@using Syncfusion.Blazor.DropDowns
+@using System.Data
+@using Syncfusion.XlsIO
+@using System.IO
+@using MudBlazor
+@using Syncfusion.Blazor.Calendars
+@attribute [Authorize]
+@inject ISettingBookingService _svc
+@inject ISweetAlertService swal
+@inject ITextTranslator Text
+@inject FieldExtractor<EntityVeternayBooking> field
+
+
+<SfDialog Target="#target" MinHeight="70%" Width="400px" Height="400px" class="dialog-create-employee" IsModal="true" ShowCloseIcon="true" @bind-Visible="_modalVisible">
+    <DialogTemplates>
+        <Header><span class="title">@_modalTitle</span></Header>
+        <Content>
+            <EditForm id="editForm" Model="@_model" OnValidSubmit="@OnFormSubmit">
+                <DataAnnotationsValidator />
+                <div class="form-group">
+                    <label class="form-label fw-bold">Tìm kiếm khách hàng</label>
+                    <SfComboBox TItem="ModelListCustomer" TValue="Guid"
+                                @bind-Value="_selectedCustomerGuid"
+                                DataSource="_optCustomer" Placeholder="Chọn khách hàng"
+                                PopupHeight="230px" Width="100%" AllowFiltering="true">
+                        <ComboBoxFieldSettings Text="FullName" Value="Guid" />
+                        <ComboBoxEvents TItem="ModelListCustomer" TValue="Guid" ValueChange="OnCustomerChanged" />
+                    </SfComboBox>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-md-12 mt-lg-3">
+                                <SfDateTimePicker TValue="DateTime?"
+                                                  Placeholder="Chọn ngày và giờ"
+                                                  Format="dd/MM/yyyy HH:mm"
+                                                  Locale="vi"
+                                                  ShowClearButton="true"
+                                                  @bind-Value="@_model.AppointmentDate">
+                                </SfDateTimePicker>
+                                <CustomValidationMessage style="color: red;" For="@(() => _model.AppointmentDate)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if (_selectedCustomer != null)
+                {
+                    <div class="row mt-4">
+                        <div class="col-lg-6 mb-3">
+                            <div class="card shadow-sm border-0 h-100">
+                                <div class="card-header bg-primary text-white fw-bold">
+                                    Khách hàng
+                                </div>
+                                <div class="card-body">
+                                    <p><b>Tên:</b> @_selectedCustomer.FullName</p>
+                                    <p><b>Email:</b> @_selectedCustomer.Email</p>
+                                    <p><b>CCCD:</b> @_selectedCustomer.CitizenID</p>
+                                    <p><b>Điện thoại:</b> @_selectedCustomer.Phone</p>
+                                    <p><b>Địa chỉ:</b> @_selectedCustomer.Address</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-3">
+                            <div class="card shadow-sm border-0 h-100">
+                                <div class="card-header bg-success text-white fw-bold">
+                                    Thú cưng
+                                </div>
+                                <div class="card-body">
+                                    @if (_selectedCustomer?.Pets?.Any() == true)
+                                    {
+                                        <SfDropDownList TValue="Guid" TItem="ModelPets"
+                                                        DataSource="@_selectedCustomer.Pets"
+                                                        Placeholder="Chọn thú cưng"
+                                                        @bind-Value="_selectedPet"
+                                                        Width="100%">
+                                            <DropDownListFieldSettings Text="Name" Value="Guid" />
+                                            <DropDownListEvents TValue="Guid" TItem="ModelPets" ValueChange="OnPetsChanged" />
+                                        </SfDropDownList>
+
+                                        @if (_selectedPets != null)
+                                        {
+                                            <div class="mt-3">
+                                                <p><b>Tên:</b> @_selectedPets.Name</p>
+                                                <p><b>Giới tính:</b> @_selectedPets.Gender</p>
+                                                <p><b>Giống loài:</b> @_selectedPets.Species</p>
+                                                <p><b>Tuổi:</b> @_selectedPets.Breed</p>
+                                            </div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <p class="text-muted fst-italic">Khách hàng chưa có thú cưng nào.</p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                            @if(_selectedPets != null){
+                        <div class="col-lg-12">
+                            <div class="card shadow-sm border-0 h-100">
+                                <div class="card-header bg-success text-white fw-bold">
+                                    Dịch vụ
+                                </div>
+                                <div class="card-body">
+                                    <SfMultiSelect TValue="Guid[]" TItem="ModelService" @bind-Value="_selectedService" Placeholder="Chọn dịch vụ" DataSource="@_optService" AllowFiltering="true">
+                                        <MultiSelectFieldSettings Text="Name" Value="Guid"></MultiSelectFieldSettings>
+                                        <MultiSelectEvents TValue="Guid[]" TItem="ModelService" ValueChange="@OnServiceChanged" />
+                                    </SfMultiSelect>
+                                    @if (_selectedServicesList?.Any() == true)
+                                    {
+                                        <div class="mt-3">
+                                            <h6 class="fw-bold text-primary">Dịch vụ đã chọn:</h6>
+                                            <div class="table-responsive">
+                                                <table class="table table-sm table-striped">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th>Tên dịch vụ</th>
+                                                            <th class="text-end">Giá</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        @foreach (var service in _selectedServicesList)
+                                                        {
+                                                            <tr>
+                                                                <td>@service.Name</td>
+                                                                <td class="text-end">@service.Price.ToString("#,##0") VNĐ</td>
+                                                            </tr>
+                                                        }
+                                                    </tbody>
+                                                    <tfoot class="table-warning">
+                                                        <tr>
+                                                            <th>Tổng cộng:</th>
+                                                            <th class="text-end fw-bold text-danger">@_totalPrice.ToString("#,##0") VNĐ</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                            }
+                    </div>
+                }
+                <div class="form-group mt-4">
+                    <label class="form-label fw-bold">Mô tả</label>
+                    <InputTextArea rows="3" class="form-control" @bind-Value="_model.Notes" />
+                    <CustomValidationMessage style="color: red;" For="@(() => _model.Notes)" />
+                </div>
+            </EditForm>
+        </Content>
+    </DialogTemplates>
+    <DialogEvents Closed="@OnModalClosed"></DialogEvents>
+    <DialogButtons>
+        <DialogButton form=editForm class="btn-submit" Type="Syncfusion.Blazor.Popups.ButtonType.Submit" IsPrimary="false" Content="Xác nhận"></DialogButton>
+    </DialogButtons>
+</SfDialog>
+<div class="app-content-wrapper">
+    @if (active)
+    {
+        <div class="app-content-head" style="height: auto">
+            <div class="row" style="padding: 0 0 0 5px">
+                <div class="col-12">
+                    <ol class="breadcrumb">
+                        <li>Đăng ký</li>
+                        <li style="color: #777">&nbsp; / &nbsp;</li>
+                        <li class="active text-primary"> Danh sách</li>
+                    </ol>
+                </div>
+                <div class="col-md-4 col-lg-3 d-none d-md-block">
+                    <div class="input-group">
+                        <input type="text" class="form-control" style="height: 31px;" placeholder="@Text["Search...", "Tìm kiếm..."]" @bind="_filterSearch" @bind:event="oninput" @onkeyup="OnChange" />
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-white" style="height: 31px;" id="basic-addon2"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8 col-lg-9 text-right">
+                    <div class="btn-group pr-0">
+                        <button class="btn btn-light float-right newplus mr-2" @onclick="NewEmployee_Click"><span class="fas fa-plus"></span> @Text["B", "Đặt lịch"]</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="app-content-body" style="overflow:auto" id="target">
+            <div class="container-fluid" style="overflow:auto">
+                <SfGrid AllowTextWrap="true" ID="Grid" @ref="_grid" EnableHover="true" AllowResizing="true" DataSource="@_displaySource" AllowPaging="true" AllowFiltering="true" AllowSorting="true"
+                        EnableAdaptiveUI="false" AllowExcelExport="true" AllowPdfExport="true" ShowColumnChooser="true" EnableVirtualization="false" Height="100%">
+                    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Menu"></GridFilterSettings>
+                    <GridTextWrapSettings WrapMode="WrapMode.Content"></GridTextWrapSettings>
+                    <GridPageSettings PageSize="50"></GridPageSettings>
+                    <GridColumns>
+                        <GridColumn  Field=@nameof(EntityVeternayBooking.Code) HeaderText="@Text["Code","Mã"]" Width="160">
+                        </GridColumn>
+                        <GridColumn Field=@nameof(EntityVeternayBooking.Customer.FullName) HeaderText="@Text["Name Service", "Tên đăng ký"]" Width="160">
+                            <Template>
+                                @{
+                                    var item = (context as EntityVeternayBooking);
+                                }
+                                <a href="/customer/profile/@item.Customer.Guid">@item.Customer.FullName</a>
+                            </Template>
+                        </GridColumn>
+                        <GridColumn Field=@nameof(EntityVeternayBooking.BookingServices) HeaderText="@Text["Service", "Dịch vụ đăng ký"]" Width="160">
+                            <Template>
+                                @{
+                                    var item = (context as EntityVeternayBooking);
+                                }
+                                @if (item.BookingServices != null )
+                                {
+                                    <ul class="list-group mb-3">
+                                        @foreach (var service in item.BookingServices)
+                                        {
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                <span>@service.TitleService - @service.Price.ToString("N0") đ</span>
+                                            </li>
+                                        }
+                                    </ul>
+                                }
+                            </Template>
+                        </GridColumn>
+                        <GridColumn Field=@nameof(EntityVeternayBooking.AppointmentDate) HeaderText="@Text["Date Booking", "Ngày đăng ký"]" Width="160">
+                        </GridColumn>
+                        <GridColumn Field=@nameof(EntityVeternayBooking.TotalAmount) HeaderText="@Text["TotalAmount", "Tổng phí"]" Width="160">
+                        </GridColumn>
+                        <GridColumn Field=@nameof(EntityVeternayBooking.Status) HeaderText="@Text["Status", "Status"]" Width="160">
+                            <Template>
+                                @{
+                                    var item =  (context as EntityVeternayBooking);
+                                    @if (item.Status == "completed")
+                                    {
+                                        <p>Đã có hồ sơ khám</p>
+                                    }else
+                                    {
+                                        <p>Chưa xử lý</p>
+                                    }
+                                }
+                            </Template>
+                        </GridColumn>
+
+                        <GridColumn Field=@nameof(EntityVeternayBooking.Notes) HeaderText="@Text[field[nameof(EntityVeternayBooking.Notes)]]" Width="160"></GridColumn>
+                        <GridColumn HeaderText="@Text["Functions", "Chức năng"]" Width="110" TextAlign="TextAlign.Right">
+                            <Template>
+                                @{
+                                    var item = (context as EntityVeternayBooking);
+                                    @if (item.Status != "completed")
+                                    {
+                                        <button type="button" class="btn-pet-action btn-exam" title="Khám" @onclick="() => MeducalRecord(item.Id)">
+                                            <span class="plus-icon"></span>
+                                        </button>
+                                        <SfDropDownButton CssClass="e-caret-hide float-right" style="padding-left: 13px;" IconCss="fas fa-ellipsis-v">
+                                            <DropDownMenuItems>
+                                                <DropDownButtonEvents ItemSelected="SelectedTask"></DropDownButtonEvents>
+                                                <DropDownMenuItem Id="@(item.Id.ToString())" Text="Sửa"></DropDownMenuItem>
+                                                <DropDownMenuItem Id="@(item.Id.ToString())" Text="Xóa"></DropDownMenuItem>
+                                            </DropDownMenuItems>
+                                        </SfDropDownButton>
+                                    }
+                                }
+                            </Template>
+                        </GridColumn>
+                    </GridColumns>
+                </SfGrid>
+            </div>
+        </div>
+     }
+</div>
+<style>
+    .btn-pet-action.btn-exam {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+        background: linear-gradient(135deg, #28a745, #20c997); /* xanh gradient */
+        color: white;
+        cursor: pointer;
+        margin-right:14px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+        .btn-pet-action.btn-exam:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.3);
+        }
+
+    .plus-icon {
+        position: relative;
+        width: 18px;
+        height: 2px;
+        background: white;
+        border-radius: 2px;
+    }
+
+        .plus-icon::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -8px;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 18px;
+            background: white;
+            border-radius: 2px;
+        }
+
+</style>
+@code {
+    #region vavariables
+    [Parameter]
+    public decimal _price { get; set; } = 0;
+    public int _normail { get; set; } = 0;
+    public string str { get; set; }
+    private SfGrid<EntityVeternayBooking> _grid;
+    private IEnumerable<EntityVeternayBooking> _dataSource = new List<EntityVeternayBooking>();
+    private List<EntityVeternayBooking> _displaySource = new();
+    private List<OptionItem<Guid>> _optOffices = new();
+    private List<OptionItem<Guid>> _optJob = new();
+    private EntityVeternayBooking _model = new();
+    private bool active = false;
+    private bool _modalVisible = false;
+    private bool _filter = false;
+    private string _modalTitle;
+    private bool _add_Pets = false;
+    private string _filterSearch;
+    private List<ModelListCustomer> _optCustomer = new(); 
+    private List<ModelPets> _optCusPet = new();
+    private List<ModelService> _optService = new();
+    private Guid _selectedCustomerGuid = Guid.Empty;
+    private Guid _selectedPet = Guid.Empty;
+    private Guid[] _selectedService = Array.Empty<Guid>();
+    private ModelListCustomer _selectedCustomer;
+    private ModelPets _selectedPets;
+    private List<ModelService> _selectedServicesList = new();
+    private decimal _totalPrice = 0;
+    #endregion
+    #region events
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        _ = swal.Loading("Nạp thông tin ..");
+
+
+        await RereshData();
+        await ListCustomer();
+        await ListService();
+        StateHasChanged();
+    }
+
+    private async Task NewEmployee_Click()
+    {
+        _modalTitle = "Thêm đăng ký";
+        _modalVisible = true;
+
+
+    }
+
+    private void OnModalClosed(Object args)
+    {
+        _model = new EntityVeternayBooking();
+    }
+    #endregion
+    private async Task ListCustomer()
+    {
+        var rspCustomer = await _svc.GetlistCustomer();
+        _optCustomer = rspCustomer.ToList();
+        StateHasChanged();
+    }
+    private async Task ListService()
+    {
+        var rspService = await _svc.GetListService();
+        _optService = rspService.ToList();
+        StateHasChanged();
+    }
+    #region methods
+    private async Task RereshData()
+    {
+
+        var rsp = await AppStatic.CallApi(() => _svc.GetList());
+        if (!rsp.Success)
+        {
+            _ = swal.Error(rsp.Message);
+            return;
+        }
+
+        active = true;
+        _dataSource = rsp.Items;
+
+        _displaySource = _dataSource.OrderByDescending(x => x.Id).ToList();
+
+        await swal.Close();
+        StateHasChanged();
+    }
+
+    private async void OnFormSubmit()
+    {
+        _ = swal.Loading("Lưu thông tin..");
+        _model.TotalAmount = _totalPrice;
+        _model.GuidCustomer = _selectedCustomerGuid; 
+        _model.GuidPet = _selectedPet;
+		_model.CustomerName = _selectedCustomer?.FullName;
+        _model.PetId = _selectedPets.Id;
+        _model.CustomerId = _selectedCustomer.Id;
+        _model.BookingServices = _selectedServicesList.Select(x => new EntityVeternayBookingService
+        {
+            Guid = Guid.NewGuid(),
+            GuidBooking = _model.Guid,
+            Price = x.Price,
+            TitleService = x.Name,
+            GuidService = x.Guid,
+            ServiceId = x.Id
+           
+        }).ToList();
+        var rsp = await AppStatic.CallApi(() => _svc.Save(_model));
+        if (!rsp.Success)
+        {
+            _ = swal.Error(rsp.Message);
+            return;
+        }
+        _model = new EntityVeternayBooking();
+        _selectedCustomerGuid = Guid.Empty;
+        _selectedPet = Guid.Empty;
+        _selectedService = Array.Empty<Guid>();
+        _selectedCustomer = null;
+        _selectedPets = null;
+        _selectedServicesList = new List<ModelService>();
+        _totalPrice = 0;
+        _modalVisible = false;
+        await RereshData();
+        StateHasChanged();
+
+    }
+
+    private void OnChange()
+    {
+        var query = _dataSource.AsQueryable();
+
+        // if (!string.IsNullOrWhiteSpace(_filterSearch))
+        //     query = query.Where(w => w.Name.ToLower().Contains(_filterSearch.ToLower()));
+
+        _displaySource = query.OrderByDescending(o => o.Id).ToList();
+        StateHasChanged();
+    }
+
+    private async void Modify(int id)
+    {
+        var item = _dataSource.Single(t => t.Id == id);
+        _model = item;
+
+        _selectedCustomerGuid = item.GuidCustomer;
+        _selectedCustomer = _optCustomer.FirstOrDefault(c => c.Guid == item.GuidCustomer);
+        _selectedPet = item.GuidPet;
+        _selectedPets = _selectedCustomer?.Pets?.FirstOrDefault(p => p.Guid == item.GuidPet);
+        if (item.BookingServices?.Any() == true)
+        {
+            _selectedService = item.BookingServices.Select(bs => bs.GuidService).ToArray();
+
+            _selectedServicesList.Clear();
+            foreach (var svc in _selectedService)
+            {
+                var service = _optService.FirstOrDefault(s => s.Guid == svc);
+                if (service != null)
+                    _selectedServicesList.Add(service);
+            }
+            CalculateTotalPrice();
+        }
+        else
+        {
+            _selectedService = Array.Empty<Guid>();
+            _selectedServicesList.Clear();
+            _totalPrice = 0;
+        }
+
+        _modalTitle = "Hiệu chỉnh đăng ký";
+        _modalVisible = true;
+
+        await Task.CompletedTask;
+       
+    }
+
+    private async void Delete(int id)
+    {
+        var confirm = await swal.ConfirmDelete("Xác nhận xoá thông tin");
+        if (!confirm) return;
+
+        _ = swal.Loading("Đang xóa ..");
+
+        var rsp = await AppStatic.CallApi(() => _svc.Delete(id));
+        if (!rsp.Success)
+        {
+            _ = swal.Error(rsp.Message);
+            return;
+        }
+
+        await RereshData();
+        StateHasChanged();
+    }
+
+    private async Task MeducalRecord(int id)
+    {
+        var confirm = await swal.ConfirmDelete("Xác nhận khám");
+        if (!confirm) return;
+        _ = swal.Loading("Đang xử lý..");
+        var item = await AppStatic.CallApi(() => _svc.SaveMediicalRecord(id));
+        if (!item.Success)
+        {
+            _ = swal.Error(item.Message);
+            return;
+        }
+        await RereshData();
+        StateHasChanged();
+    }
+    private async Task SelectedTask(MenuEventArgs e)
+    {
+        string text = e.Item.Text.ToLower();
+        int id = Convert.ToInt32(e.Item.Id);
+        if (text == "sửa")
+            Modify(id);
+        if (text == "xóa")
+            Delete(id);
+    }
+
+
+    private void OnCustomerChanged(ChangeEventArgs<Guid, ModelListCustomer> args)
+    {
+        _selectedCustomer = _optCustomer.FirstOrDefault(x => x.Guid == args.Value);
+        _selectedPet = Guid.Empty;
+        _selectedPets = null;
+        StateHasChanged();
+    }
+    private void OnPetsChanged(ChangeEventArgs<Guid, ModelPets> args)
+    {
+        if (_selectedCustomer?.Pets != null)
+        {
+            _selectedPets = _selectedCustomer.Pets.FirstOrDefault(x => x.Guid == args.Value);
+        }
+        StateHasChanged();
+    }
+    private void OnServiceChanged(MultiSelectChangeEventArgs<Guid[]> args)
+    {
+        _selectedService = args.Value ?? Array.Empty<Guid>();
+        UpdateService();
+        CalculateTotalPrice();
+        StateHasChanged();
+    }
+
+    private void UpdateService()
+    {
+        _selectedServicesList.Clear();
+        foreach(var item in _selectedService)
+        {
+            var service = _optService.FirstOrDefault(x => x.Guid == item);
+            if (service != null)
+            {
+				_selectedServicesList.Add(service);
+            }
+        }
+    }
+    private void CalculateTotalPrice()
+    {
+        _totalPrice = _selectedServicesList.Sum(s => s.Price);
+    }
+    #endregion
+}

@@ -49,4 +49,20 @@ public class MyServiceBase : IServiceBase
     {
         return _ctx.Mediator.Send(new QueryInfoEmployee { Guid = guid });
     }
+    [HttpGet]
+    public Task<List<ModelListCustomer>> GetlistCustomer()
+    {
+        return _ctx.Mediator.Send(new QueryListCustomer());
+    }
+    [HttpGet]
+    public Task<List<ModelService>> GetListService()
+    {
+        return _ctx.Mediator.Send(new QueryListService());
+    }
+    [HttpGet]
+    public Task<ModelListCustomer> GetInforCustomer(Guid guid)
+    {
+        return _ctx.Mediator.Send(new QueryInforCustomer { Guid = guid });
+    }
+
 }

@@ -332,13 +332,15 @@ if (SwaggerEnabled.ToLower() == "true")
         options.ConfigObject.AdditionalItems.Add("tagsSorter", "alpha");
     });
 }
-
+System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("vi-VN");
+System.Globalization.CultureInfo.DefaultThreadCurrentUICulture = new System.Globalization.CultureInfo("vi-VN");
 // Cấu hình các endpoint
 //app.MapBlazorHub(options =>
 //{
 //    options.WebSockets.CloseTimeout = new TimeSpan(1, 1, 1);
 //    options.LongPolling.PollTimeout = new TimeSpan(1, 0, 0);
 //});
+
 app.MapBlazorHub();
 app.MapRazorPages();
 app.MapControllers();
@@ -350,8 +352,6 @@ foreach (var module in aspnetModules)
 {
     module.BuildModule(app);
 }
-
-
 
 
 //await app.Services.CreateOrUpdateTernant("localhost");

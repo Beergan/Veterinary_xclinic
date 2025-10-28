@@ -15,10 +15,17 @@ public interface IServiceBase
 
     [Get(nameof(GetOptionOffices))]
     Task<List<OptionItem<Guid>>> GetOptionOffices();
-
+    [Get(nameof(GetlistCustomer))]
+    Task<List<ModelListCustomer>> GetlistCustomer();
     [Get(nameof(GetOptionJob))]
     Task<List<OptionItem<Guid>>> GetOptionJob();
 
     [Get(nameof(GetInfoEmployee))]
     Task<ModelInfoEmployee> GetInfoEmployee(Guid guid);
+
+    [Get(nameof(GetListService))]
+    Task<List<ModelService>> GetListService();
+
+    [Get(nameof(GetInforCustomer))]
+    Task<ModelListCustomer> GetInforCustomer(Guid guid);
 }

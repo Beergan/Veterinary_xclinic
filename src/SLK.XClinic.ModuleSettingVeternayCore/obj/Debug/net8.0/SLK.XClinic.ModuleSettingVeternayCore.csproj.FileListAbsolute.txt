@@ -1,0 +1,16 @@
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\bin\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.deps.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\bin\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.dll
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\bin\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.xml
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\bin\Debug\net8.0\SLK.XClinic.Abstract.dll
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\bin\Debug\net8.0\SLK.XClinic.Abstract.xml
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.csproj.AssemblyReference.cache
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.AssemblyInfoInputs.cache
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.AssemblyInfo.cs
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.csproj.CoreCompileInputs.cache
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.sourcelink.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XCli.90788EFB.Up2Date
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.dll
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\refint\SLK.XClinic.ModuleSettingVeternayCore.dll
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\SLK.XClinic.ModuleSettingVeternayCore.xml
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingVeternayCore\obj\Debug\net8.0\ref\SLK.XClinic.ModuleSettingVeternayCore.dll

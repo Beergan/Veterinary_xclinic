@@ -651,7 +651,85 @@ namespace SLK.XClinic.Db.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CustomerId")
+                    b.Property<DateTime?>("AppointmentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CustomerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<Guid>("GuidCustomer")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GuidEmployee")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("GuidMedicalRecord")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GuidPet")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("MedicalRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PetId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("MedicalRecordId");
+
+                    b.HasIndex("PetId");
+
+                    b.ToTable("VETERNAY_BOOKING");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayBookingService", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("BookingId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreated")
@@ -668,25 +746,16 @@ namespace SLK.XClinic.Db.Migrations
                     b.Property<Guid>("GuidBooking")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("GuidCustomer")
+                    b.Property<Guid>("GuidService")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("GuidEmployee")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid>("GuidPet")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("GuidVisit")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ServicesId")
+                    b.Property<int?>("ServiceId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
+                    b.Property<string>("TitleService")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserCreated")
@@ -699,11 +768,11 @@ namespace SLK.XClinic.Db.Migrations
 
                     b.HasAlternateKey("Guid");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("BookingId");
 
-                    b.HasIndex("ServicesId");
+                    b.HasIndex("ServiceId");
 
-                    b.ToTable("VETERNAY_BOOKING");
+                    b.ToTable("VETERNAY_BOOKING_SERVICE");
                 });
 
             modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayCustomer", b =>
@@ -766,6 +835,529 @@ namespace SLK.XClinic.Db.Migrations
                     b.ToTable("VETERNAY_CUSTOMER");
                 });
 
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayDisease", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.ToTable("VETERNAY_DISEASE");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayDiseaseType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("Species")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.ToTable("VETERNAY_DISEASETYPE");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalAttachment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FilePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<Guid>("GuidMedicalRecord")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("MedicalRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.HasIndex("MedicalRecordId");
+
+                    b.ToTable("VETERNAY_MEDICAL_ATTACHMENT");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalDisease", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("DiseaseTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<Guid>("GuidDiseaseType")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GuidMedicalRecord")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("MedicalRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.HasIndex("DiseaseTypeId");
+
+                    b.HasIndex("MedicalRecordId");
+
+                    b.ToTable("VETERNAY_MEDICAL_DISEASE");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalPrescription", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DosageInstruction")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<Guid>("GuidMedicalRecord")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GuidMedication")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("MedicalRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MedicationId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.HasIndex("MedicalRecordId");
+
+                    b.HasIndex("MedicationId");
+
+                    b.ToTable("VETERNAY_MEDICAL_PRESCRIPTION");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CustomerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Diagnosis")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<Guid>("GuidCustomer")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GuidPet")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("PetId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("VetId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("VisitDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.HasIndex("PetId");
+
+                    b.ToTable("VETERNAY_MEDICAL_RECORD");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalService", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<Guid>("GuidMedicalRecord")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GuidService")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("MedicalRecordId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.HasIndex("MedicalRecordId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("VETERNAY_MEDICAL_SERVICE");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedication", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<decimal>("ImportPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MedicationCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("RecommendedDosage")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("StockQuantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Unit")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UnitType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("VETERNAY_MEDICATION");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicationCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.ToTable("VETERNAY_MEDICATION_CATEGORY");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayPetType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid>("Guid")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasColumnOrder(2);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("UserCreated")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserModified")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasAlternateKey("Guid");
+
+                    b.ToTable("VETERNAY_PET_TYPE");
+                });
+
             modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayServices", b =>
                 {
                     b.Property<int>("Id")
@@ -776,6 +1368,7 @@ namespace SLK.XClinic.Db.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Code")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DateCreated")
@@ -792,13 +1385,11 @@ namespace SLK.XClinic.Db.Migrations
                         .HasColumnType("uniqueidentifier")
                         .HasColumnOrder(2);
 
-                    b.Property<Guid>("GuidServices")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
@@ -815,77 +1406,6 @@ namespace SLK.XClinic.Db.Migrations
                     b.HasAlternateKey("Guid");
 
                     b.ToTable("VETERNAY_SERVICES");
-                });
-
-            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayVisit", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnOrder(1);
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<decimal>("Cost")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("DateCreated")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("DateModified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Diagnosis")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("EntityVeternayBookingId")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("Guid")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnOrder(2);
-
-                    b.Property<Guid>("GuidBooking")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("GuidVisit")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsFollowUpNeeded")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsPaid")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Reason")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Treatment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserCreated")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserModified")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VisitDate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasAlternateKey("Guid");
-
-                    b.HasIndex("EntityVeternayBookingId");
-
-                    b.ToTable("VETERNAY_VISIT");
                 });
 
             modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityveternayPet", b =>
@@ -912,7 +1432,10 @@ namespace SLK.XClinic.Db.Migrations
                     b.Property<DateTime>("DateModified")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("EntityVeternayCustomerId")
+                    b.Property<int>("EntityVeternayCustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("EntityVeternayDiseaseTypeId")
                         .HasColumnType("int");
 
                     b.Property<string>("Gender")
@@ -940,6 +1463,12 @@ namespace SLK.XClinic.Db.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("PetTypeGuid")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int?>("PetTypeId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Species")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -955,6 +1484,10 @@ namespace SLK.XClinic.Db.Migrations
                     b.HasAlternateKey("Guid");
 
                     b.HasIndex("EntityVeternayCustomerId");
+
+                    b.HasIndex("EntityVeternayDiseaseTypeId");
+
+                    b.HasIndex("PetTypeId");
 
                     b.ToTable("VETERNAY_PET");
                 });
@@ -1014,34 +1547,134 @@ namespace SLK.XClinic.Db.Migrations
                 {
                     b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayCustomer", "Customer")
                         .WithMany()
-                        .HasForeignKey("CustomerId");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayServices", "Services")
-                        .WithMany("Bookings")
-                        .HasForeignKey("ServicesId");
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", "MedicalRecord")
+                        .WithMany()
+                        .HasForeignKey("MedicalRecordId");
+
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityveternayPet", "Pet")
+                        .WithMany()
+                        .HasForeignKey("PetId");
 
                     b.Navigation("Customer");
 
-                    b.Navigation("Services");
+                    b.Navigation("MedicalRecord");
+
+                    b.Navigation("Pet");
                 });
 
-            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayVisit", b =>
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayBookingService", b =>
                 {
-                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayBooking", null)
-                        .WithMany("Visits")
-                        .HasForeignKey("EntityVeternayBookingId");
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayBooking", "Booking")
+                        .WithMany("BookingServices")
+                        .HasForeignKey("BookingId");
+
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayServices", "Service")
+                        .WithMany("BookingServices")
+                        .HasForeignKey("ServiceId");
+
+                    b.Navigation("Booking");
+
+                    b.Navigation("Service");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalAttachment", b =>
+                {
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", "MedicalRecord")
+                        .WithMany("Attachments")
+                        .HasForeignKey("MedicalRecordId");
+
+                    b.Navigation("MedicalRecord");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalDisease", b =>
+                {
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayDiseaseType", "DiseaseType")
+                        .WithMany()
+                        .HasForeignKey("DiseaseTypeId");
+
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", "MedicalRecord")
+                        .WithMany("Diseases")
+                        .HasForeignKey("MedicalRecordId");
+
+                    b.Navigation("DiseaseType");
+
+                    b.Navigation("MedicalRecord");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalPrescription", b =>
+                {
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", "MedicalRecord")
+                        .WithMany("Prescriptions")
+                        .HasForeignKey("MedicalRecordId");
+
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedication", "Medication")
+                        .WithMany()
+                        .HasForeignKey("MedicationId");
+
+                    b.Navigation("MedicalRecord");
+
+                    b.Navigation("Medication");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", b =>
+                {
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityveternayPet", "Pet")
+                        .WithMany()
+                        .HasForeignKey("PetId");
+
+                    b.Navigation("Pet");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalService", b =>
+                {
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", "MedicalRecord")
+                        .WithMany("Services")
+                        .HasForeignKey("MedicalRecordId");
+
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayServices", "Service")
+                        .WithMany("MedicalServices")
+                        .HasForeignKey("ServiceId");
+
+                    b.Navigation("MedicalRecord");
+
+                    b.Navigation("Service");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedication", b =>
+                {
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicationCategory", "Category")
+                        .WithMany("Medications")
+                        .HasForeignKey("CategoryId");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityveternayPet", b =>
                 {
                     b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayCustomer", null)
                         .WithMany("Pets")
-                        .HasForeignKey("EntityVeternayCustomerId");
+                        .HasForeignKey("EntityVeternayCustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayDiseaseType", null)
+                        .WithMany("Pets")
+                        .HasForeignKey("EntityVeternayDiseaseTypeId");
+
+                    b.HasOne("SLK.XClinic.ModuleVeternayCore.EntityVeternayPetType", "PetType")
+                        .WithMany("Pets")
+                        .HasForeignKey("PetTypeId");
+
+                    b.Navigation("PetType");
                 });
 
             modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayBooking", b =>
                 {
-                    b.Navigation("Visits");
+                    b.Navigation("BookingServices");
                 });
 
             modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayCustomer", b =>
@@ -1049,9 +1682,37 @@ namespace SLK.XClinic.Db.Migrations
                     b.Navigation("Pets");
                 });
 
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayDiseaseType", b =>
+                {
+                    b.Navigation("Pets");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicalRecord", b =>
+                {
+                    b.Navigation("Attachments");
+
+                    b.Navigation("Diseases");
+
+                    b.Navigation("Prescriptions");
+
+                    b.Navigation("Services");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayMedicationCategory", b =>
+                {
+                    b.Navigation("Medications");
+                });
+
+            modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayPetType", b =>
+                {
+                    b.Navigation("Pets");
+                });
+
             modelBuilder.Entity("SLK.XClinic.ModuleVeternayCore.EntityVeternayServices", b =>
                 {
-                    b.Navigation("Bookings");
+                    b.Navigation("BookingServices");
+
+                    b.Navigation("MedicalServices");
                 });
 #pragma warning restore 612, 618
         }

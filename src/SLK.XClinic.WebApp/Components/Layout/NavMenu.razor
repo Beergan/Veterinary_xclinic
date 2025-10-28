@@ -1,0 +1,85 @@
+﻿<div class="custom-nav-menu">
+    <div class="nav-header">
+        <h2>PHÒNG KHÁM THÚ Y</h2>
+        <div class="subtitle">Hệ thống quản lý</div>
+        <div class="veterinary-badge">
+            <MudIcon Icon="@Icons.Material.Filled.Pets" />
+            VET CLINIC
+        </div>
+    </div>
+
+    <MudNavMenu>
+        @* KHÁCH HÀNG *@
+        <MudNavGroup Title="Khách hàng" Expanded="false" Icon="@Icons.Material.Filled.People">
+            <MudNavLink Href="customer/list" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.List">
+                Danh sách khách hàng
+            </MudNavLink>
+            <MudNavLink Href="customer/bookings" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.BookOnline">
+                Danh sách đăng ký
+            </MudNavLink>
+            <MudNavLink Href="customer/medicalrecord" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.MedicalInformation">
+                Danh sách hồ sơ khám
+            </MudNavLink>
+            <MudNavLink Href="customer/history" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.History">
+                Lịch sử khám
+            </MudNavLink>
+            <MudNavLink Href="customer/appointments" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Event">
+                Lịch hẹn tái khám
+            </MudNavLink>
+        </MudNavGroup>
+        @* CÀI ĐẶT THÚ CƯNG *@
+        <MudNavGroup Title="Cài đặt thú cưng" Expanded="false" Icon="@Icons.Material.Filled.Category">
+            <MudNavLink Href="/setting/type" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Pets">
+                Danh mục Thú cưng
+            </MudNavLink>
+            <MudNavLink Href="/catelory/medication" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Medication">
+                Danh mục thuốc
+            </MudNavLink>
+            <MudNavLink Href="/list/medication" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Category">
+                Danh sách thuốc
+            </MudNavLink>
+            <MudNavLink Href="/setting/services" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.MedicalServices">
+                Danh mục dịch vụ
+            </MudNavLink>
+        </MudNavGroup>
+        @* CÀI ĐẶT *@
+        <MudNavGroup Title="Cài đặt" Expanded="false" Icon="@Icons.Material.Filled.Settings">
+            <MudNavLink Href="employee/list" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Work">
+                Danh sách nhân sự
+            </MudNavLink>
+            <MudNavLink Href="/category/company" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Business">
+                Công ty
+            </MudNavLink>
+            <MudNavLink Href="/category/office" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Apartment">
+                Chi nhánh
+            </MudNavLink>
+            <MudNavLink Href="/category/job" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.WorkOutline">
+                Vị trí công việc
+            </MudNavLink>
+        </MudNavGroup>
+        @* QUẢN TRỊ *@
+        <MudNavGroup Title="Quản trị" Expanded="false" Icon="@Icons.Material.Filled.Security">
+            <MudNavLink Href="management/account" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AccountBox">
+                Tài khoản
+            </MudNavLink>
+            <MudNavLink Href="management/permission-group" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Lock">
+                Nhóm phân quyền
+            </MudNavLink>
+            <MudNavLink Href="audit-log" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.FactCheck">
+                Logs hệ thống
+            </MudNavLink>
+        </MudNavGroup>
+        @* BÁNH CÁO & THỐNG KÊ *@
+        <MudNavGroup Title="Báo cáo & Thống kê" Expanded="false" Icon="@Icons.Material.Filled.Analytics">
+            <MudNavLink Href="/reports/revenue" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.TrendingUp">
+                Báo cáo doanh thu
+            </MudNavLink>
+            <MudNavLink Href="/reports/customers" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.PeopleAlt">
+                Thống kê khách hàng
+            </MudNavLink>
+            <MudNavLink Href="/reports/services" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.PieChart">
+                Thống kê dịch vụ
+            </MudNavLink>
+        </MudNavGroup>
+    </MudNavMenu>
+</div>

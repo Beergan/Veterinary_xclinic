@@ -10,6 +10,7 @@ public class LoginModel : PageModel
 {
     private readonly UserManager<SA_USER> _userManager;
     private readonly IAuthService _authSvc;
+
     public ITextTranslator Text { get; set; }
     public LoginModel(IAuthService svc, ITextTranslator text, UserManager<SA_USER> userManager  )
     {
