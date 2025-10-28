@@ -88,6 +88,7 @@ public class SettingBookingService : MyServiceBase, ISettingBookingService
             }
             else
             {
+               
                 info.GuidEmployee = _ctx.GuidEmployee;
                 if (info.BookingServices != null)
                 {

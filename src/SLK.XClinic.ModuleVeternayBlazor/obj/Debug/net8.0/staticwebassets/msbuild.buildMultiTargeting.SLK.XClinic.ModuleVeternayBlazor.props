@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SLK.XClinic.ModuleVeternayBlazor.props" />
+</Project>

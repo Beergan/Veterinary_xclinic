@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SLK.XClinic.WebHost</name>
+    </assembly>
+    <members>
+        <member name="T:SLK.XClinic.WebHost.Controllers.AuthController">
+            <summary>
+            QUẢN LÝ XÁC THỰC
+            </summary>
+        </member>
+    </members>
+</doc>

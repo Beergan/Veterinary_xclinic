@@ -30,3 +30,4 @@ C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingBlazor\obj\Debug\net8.0\s
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingBlazor\obj\Debug\net8.0\staticwebassets.build.json
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingBlazor\obj\Debug\net8.0\staticwebassets.build.json
 C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingBlazor\obj\Debug\net8.0\staticwebassets.build.json
+C:\SLK\Veterinary_xclinic\src\SLK.XClinic.ModuleSettingBlazor\obj\Debug\net8.0\staticwebassets.build.json

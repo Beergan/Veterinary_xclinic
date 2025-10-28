@@ -44,7 +44,7 @@
                                                   Format="dd/MM/yyyy HH:mm"
                                                   Locale="vi"
                                                   ShowClearButton="true"
-                                                  @bind-Value="@_model.AppointmentDate">
+                                                  @bind-Value="@_model.AppointmentDate" Min="@DateTime.Now">
                                 </SfDateTimePicker>
                                 <CustomValidationMessage style="color: red;" For="@(() => _model.AppointmentDate)" />
                             </div>
@@ -359,13 +359,26 @@
     {
         _modalTitle = "Thêm đăng ký";
         _modalVisible = true;
-
+        _selectedCustomerGuid = Guid.Empty;
+        _selectedPet = Guid.Empty;
+        _selectedService = Array.Empty<Guid>();
+        _selectedCustomer = null;
+        _selectedPets = null;
+        _selectedServicesList = new List<ModelService>();
+        _totalPrice = 0;
 
     }
 
     private void OnModalClosed(Object args)
     {
         _model = new EntityVeternayBooking();
+        _selectedCustomerGuid = Guid.Empty;
+        _selectedPet = Guid.Empty;
+        _selectedService = Array.Empty<Guid>();
+        _selectedCustomer = null;
+        _selectedPets = null;
+        _selectedServicesList = new List<ModelService>();
+        _totalPrice = 0;
     }
     #endregion
     private async Task ListCustomer()
@@ -402,6 +415,13 @@
 
     private async void OnFormSubmit()
     {
+        var checkdate =  _displaySource.Where(x => x.AppointmentDate == _model.AppointmentDate);
+        if (checkdate.Any())
+        {
+            _ = swal.Error("Đã trùng lịch đăng ký");
+            return;
+        }
+
         _ = swal.Loading("Lưu thông tin..");
         _model.TotalAmount = _totalPrice;
         _model.GuidCustomer = _selectedCustomerGuid; 
@@ -436,9 +456,7 @@
         _modalVisible = false;
         await RereshData();
         StateHasChanged();
-
     }
-
     private void OnChange()
     {
         var query = _dataSource.AsQueryable();
